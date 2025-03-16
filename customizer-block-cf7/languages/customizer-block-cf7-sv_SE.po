@@ -1,0 +1,507 @@
+# Copyright (C) 2024 Mofistudio
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Contact Form 7 1.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/customizer-block-"
+"cf7\n"
+"Last-Translator: \n"
+"Language-Team: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-01T23:16:41+02:00\n"
+"PO-Revision-Date: 2024-10-01 22:11+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: customizer-block-cf7\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.11; wp-6.6.3-alpha-59007"
+
+#. Plugin Name of the plugin
+#: admin/cfcf7-admin.php:22 admin/cfcf7-admin.php:47
+msgid "Style Contact Form 7"
+msgstr "Style Contact Form 7"
+
+#. Plugin URI of the plugin
+msgid "https://stylecontactform7.com"
+msgstr "https://stylecontactform7.com"
+
+#. Description of the plugin
+msgid ""
+"This Contact Form 7 compatible Gutenberg Block automates CSS style "
+"generation allowing you to quickly design visually appealing contact forms "
+"with minimal setup."
+msgstr ""
+"Denna Gutenberg-block som är kompatibel med Contact Form 7 automatiserar CSS-"
+"stilgenerering vilket gör det möjligt att snabbt skapa visuellt tilltalande "
+"kontaktformulär med minimal konfiguration."
+
+#. Author of the plugin
+msgid "Mofistudio"
+msgstr "Mofistudio"
+
+#. Author URI of the plugin
+msgid "https://mofistudio.com/"
+msgstr "https://mofistudio.com/"
+
+#: admin/cfcf7-admin.php:19
+msgid "Admin Banner"
+msgstr "Adminbanner"
+
+#: admin/cfcf7-admin.php:24
+msgid "Version 1.1.7"
+msgstr "Version 1.1.7"
+
+#: admin/cfcf7-admin.php:25
+msgid "Updates"
+msgstr "Uppdateringar"
+
+#: admin/cfcf7-admin.php:29
+msgid "Style Contact Form 7 Icon"
+msgstr "Style Contact Form 7-ikon"
+
+#: admin/cfcf7-admin.php:32
+msgid ""
+"This plugin integrates perfectly with Contact Form 7, making it simple to "
+"create beautiful contact forms with Gutenberg blocks."
+msgstr ""
+"Detta plugin integreras perfekt med Contact Form 7 och gör det enkelt att "
+"skapa vackra kontaktformulär med Gutenberg-block."
+
+#: admin/cfcf7-admin.php:33
+msgid ""
+"You have the freedom to style multiple elements of the form. With user-"
+"friendly controls arranged in a logical sequence, you can easily insert the "
+"Style Contact Form 7 block and start customizing."
+msgstr ""
+"Du har friheten att styla flera element av formuläret. Med användarvänliga "
+"kontroller ordnade i en logisk sekvens kan du enkelt infoga Style Contact "
+"Form 7-blocket och börja anpassa."
+
+#: admin/cfcf7-admin.php:33
+msgid "To explore the features in more detail, refer to the"
+msgstr "För att utforska funktionerna mer detaljerat, se"
+
+#: admin/cfcf7-admin.php:34 admin/cfcf7-admin.php:95
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: admin/cfcf7-admin.php:40
+msgid "AVAILABLE NOW!"
+msgstr "TILLGÄNGLIGT NU!"
+
+#: admin/cfcf7-admin.php:48
+msgid "Pro"
+msgstr "Pro"
+
+#: admin/cfcf7-admin.php:50 admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro Icon"
+msgstr "Style Contact Form 7 Pro-ikon"
+
+#: admin/cfcf7-admin.php:55
+msgid "Would you like more options?"
+msgstr "Vill du ha fler alternativ?"
+
+#: admin/cfcf7-admin.php:56
+msgid ""
+"This premium add-on offers a selection of animated loaders and form-submit "
+"blocks, giving you full control and elevating the contact form experience."
+msgstr ""
+"Detta premiumtillägg erbjuder ett urval av animerade laddare och "
+"formulärsändningsblock, vilket ger dig full kontroll och förbättrar "
+"kontaktformulärupplevelsen."
+
+#: admin/cfcf7-admin.php:60
+msgid "live demo"
+msgstr "live-demo"
+
+#: admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro "
+msgstr "Style Contact Form 7 Pro"
+
+#: admin/cfcf7-admin.php:69
+msgid "Early Bird - discount icon"
+msgstr "Early Bird - rabattikon"
+
+#: admin/cfcf7-admin.php:73
+msgid "Early Bird discount price"
+msgstr "Early Bird-rabattpris"
+
+#: admin/cfcf7-admin.php:74
+msgid "if purchased before 31st Oct 24."
+msgstr "om köpt före 31 oktober 24."
+
+#: admin/cfcf7-admin.php:82
+msgid "Buy Now"
+msgstr "Köp nu"
+
+#: admin/cfcf7-admin.php:98
+msgid "Get started in a few simple steps with the video demonstrations."
+msgstr "Kom igång med några enkla steg med videodemonstrationerna."
+
+#: admin/cfcf7-admin.php:105
+msgid "Get Support"
+msgstr "Få support"
+
+#: admin/cfcf7-admin.php:108
+msgid "Questions answered, Problems solved!"
+msgstr "Frågor besvarade, Problem lösta!"
+
+#: admin/cfcf7-admin.php:116
+msgid "Leave Review"
+msgstr "Lämna recension"
+
+#: admin/cfcf7-admin.php:119
+msgid ""
+"If you find this plugin useful, please help it grow by leaving positive "
+"feedback!"
+msgstr ""
+"Om du tycker att detta plugin är användbart, hjälp det att växa genom att "
+"lämna positiv feedback!"
+
+#: admin/cfcf7-admin.php:137
+msgid "Credits"
+msgstr "Tack"
+
+#: customizer-block-cf7.php:144
+msgid "Please add a contact form."
+msgstr "Vänligen lägg till ett kontaktformulär."
+
+#: customizer-block-cf7.php:145
+msgid "No form selected."
+msgstr "Inget formulär valt."
+
+#: includes/cfcf7-functions.php:44 includes/cfcf7-functions.php:45
+msgid "Style CF7"
+msgstr "Style CF7"
+
+#: includes/cfcf7-functions.php:92
+msgid ""
+"Style Contact Form 7 - plugin requires Contact Form 7 in order to work, So "
+"please ensure that Contact Form 7 is installed and activated!"
+msgstr ""
+"Style Contact Form 7 - pluginet kräver Contact Form 7 för att fungera, så se "
+"till att Contact Form 7 är installerat och aktiverat!"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Background"
+msgstr "Blockbakgrund"
+
+#: gutenberg-block/build/index.js:1
+msgid "Background Color"
+msgstr "Bakgrundsfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width above 781px"
+msgstr "för skärmbredd över 781px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width between 361px and 780px"
+msgstr "för skärmbredd mellan 361px och 780px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width under 360px"
+msgstr "för skärmbredd under 360px"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Sizing"
+msgstr "Blockstorlek"
+
+#: gutenberg-block/build/index.js:1
+msgid "Base Font Size"
+msgstr "Grundstorlek på teckensnitt"
+
+#: gutenberg-block/build/index.js:1
+msgid "Scale everything by adjusting the base font size."
+msgstr "Skala allt genom att justera grundstorleken på teckensnittet."
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Margin"
+msgstr "Blockmarginal"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top"
+msgstr "Topp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Left & Right"
+msgstr "Vänster & Höger"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom"
+msgstr "Botten"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Padding"
+msgstr "Blockfyllning"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Border"
+msgstr "Blockram"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Radius"
+msgstr "Ramradie"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Border Outline"
+msgstr "Lägg till ramkontur"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Width"
+msgstr "Rambredd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Color"
+msgstr "Ramfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Shadow"
+msgstr "Blockskugga"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Block shadow"
+msgstr "Visa blockskugga"
+
+#: gutenberg-block/build/index.js:1
+msgid "Horizontal Offset"
+msgstr "Horisontellt avstånd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Vertical Offset"
+msgstr "Vertikalt avstånd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Blur"
+msgstr "Oskärpa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Spread"
+msgstr "Spridning"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Color"
+msgstr "Skuggfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background"
+msgstr "Fältbakgrund"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background Color"
+msgstr "Fältets bakgrundsfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Labels"
+msgstr "Fältetiketter"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Size"
+msgstr "Teckensnittsstorlek"
+
+#: gutenberg-block/build/index.js:1
+msgid "Line Height"
+msgstr "Radavstånd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text Transform"
+msgstr "Textomvandling"
+
+#: gutenberg-block/build/index.js:1
+msgid "None"
+msgstr "Ingen"
+
+#: gutenberg-block/build/index.js:1
+msgid "Uppercase"
+msgstr "Versaler"
+
+#: gutenberg-block/build/index.js:1
+msgid "Lowercase"
+msgstr "Gemener"
+
+#: gutenberg-block/build/index.js:1
+msgid "Capitalize"
+msgstr "Stora bokstäver"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Weight"
+msgstr "Teckensnittsvikt"
+
+#: gutenberg-block/build/index.js:1
+msgid "Light (300)"
+msgstr "Lätt (300)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Normal (400)"
+msgstr "Normal (400)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bold (700)"
+msgstr "Fet (700)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Color"
+msgstr "Teckensnittsfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text"
+msgstr "Fälttext"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text Color"
+msgstr "Fältets textfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Placeholder Text Color"
+msgstr "Platshållarens textfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Padding"
+msgstr "Fältfyllning"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top & Bottom"
+msgstr "Topp & Botten"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Border"
+msgstr "Fältram"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Border"
+msgstr "Visa fältram"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Style"
+msgstr "Ramstil"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Position"
+msgstr "Ramposition"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Focus Outline"
+msgstr "Fältfokusomriss"
+
+#: gutenberg-block/build/index.js:1
+msgid "Override browser default input focus styles."
+msgstr "Åsidosätt webbläsarens standardstilar för inmatningsfokus."
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Width"
+msgstr "Fokusomrissbredd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Offset"
+msgstr "Fokusomrissavstånd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Color"
+msgstr "Fokusomrissfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Shadow"
+msgstr "Fältskugga"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Shadow"
+msgstr "Visa fältskugga"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Position"
+msgstr "Skuggposition"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background"
+msgstr "Skickabackgrund"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background Color"
+msgstr "Skickabackgrundsfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Remove Gradient Background"
+msgstr "Ta bort gradientbakgrund"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Gradient Background"
+msgstr "Lägg till gradientbakgrund"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text"
+msgstr "Skickatext"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text transform"
+msgstr "Textomvandling"
+
+#: gutenberg-block/build/index.js:1
+msgid "Thin (100)"
+msgstr "Tunn (100)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Heavy (900)"
+msgstr "Tung (900)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text Color"
+msgstr "Skickatextfärg"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Width"
+msgstr "Skickabredd"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Padding"
+msgstr "Skickafyllning"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Border"
+msgstr "Skickaram"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Submit Border"
+msgstr "Visa skickaram"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Shadow"
+msgstr "Skickaskugga"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Box Shadow"
+msgstr "Visa boxskugga"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Settings"
+msgstr "Blockinställningar"
+
+#: gutenberg-block/build/index.js:1
+msgid "Form Fields"
+msgstr "Formulärfält"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Button"
+msgstr "Skickaknapp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Your form can only be submitted in the front end"
+msgstr "Ditt formulär kan endast skickas in i frontend"
+
+#: gutenberg-block/build/index.js:1
+msgid "Select a contact form"
+msgstr "Välj ett kontaktformulär"
+
+#: gutenberg-block/build/index.js:1
+msgid "Toggle contact form selector"
+msgstr "Växla kontaktformulärväljare"
+
+#: gutenberg-block/build/block.json
+msgctxt "block title"
+msgid "Style Contact Form 7"
+msgstr "Style Contact Form 7"
+
+#: gutenberg-block/build/block.json
+msgctxt "block description"
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr "Styla dina Contact Form 7-formulär enkelt."

@@ -1,0 +1,508 @@
+# Copyright (C) 2024 Mofistudio
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Contact Form 7 1.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/customizer-block-"
+"cf7\n"
+"Last-Translator: \n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-01T23:16:41+02:00\n"
+"PO-Revision-Date: 2024-10-02 00:57+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: customizer-block-cf7\n"
+"Language: ro_RO\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 :(((n%100>19)||(( n%100==0)&&(n!"
+"=0)))? 2 : 1));\n"
+"X-Loco-Version: 2.6.11; wp-6.6.3-alpha-59007"
+
+#. Plugin Name of the plugin
+#: admin/cfcf7-admin.php:22 admin/cfcf7-admin.php:47
+msgid "Style Contact Form 7"
+msgstr "Stilizează Contact Form 7"
+
+#. Plugin URI of the plugin
+msgid "https://stylecontactform7.com"
+msgstr "https://stylecontactform7.com"
+
+#. Description of the plugin
+msgid ""
+"This Contact Form 7 compatible Gutenberg Block automates CSS style "
+"generation allowing you to quickly design visually appealing contact forms "
+"with minimal setup."
+msgstr ""
+"Acest bloc Gutenberg compatibil cu Contact Form 7 automatizează generarea "
+"stilului CSS, permițându-vă să proiectați rapid formulare de contact "
+"atrăgătoare cu o configurare minimă."
+
+#. Author of the plugin
+msgid "Mofistudio"
+msgstr "Mofistudio"
+
+#. Author URI of the plugin
+msgid "https://mofistudio.com/"
+msgstr "https://mofistudio.com/"
+
+#: admin/cfcf7-admin.php:19
+msgid "Admin Banner"
+msgstr "Banner Administrator"
+
+#: admin/cfcf7-admin.php:24
+msgid "Version 1.1.7"
+msgstr "Versiunea 1.1.7"
+
+#: admin/cfcf7-admin.php:25
+msgid "Updates"
+msgstr "Actualizări"
+
+#: admin/cfcf7-admin.php:29
+msgid "Style Contact Form 7 Icon"
+msgstr "Pictogramă Stilizează Contact Form 7"
+
+#: admin/cfcf7-admin.php:32
+msgid ""
+"This plugin integrates perfectly with Contact Form 7, making it simple to "
+"create beautiful contact forms with Gutenberg blocks."
+msgstr ""
+"Acest plugin se integrează perfect cu Contact Form 7, făcând simplă crearea "
+"de formulare de contact frumoase folosind blocurile Gutenberg."
+
+#: admin/cfcf7-admin.php:33
+msgid ""
+"You have the freedom to style multiple elements of the form. With user-"
+"friendly controls arranged in a logical sequence, you can easily insert the "
+"Style Contact Form 7 block and start customizing."
+msgstr ""
+"Aveți libertatea de a stiliza mai multe elemente ale formularului. Cu "
+"controale intuitive aranjate într-o secvență logică, puteți insera cu "
+"ușurință blocul Stilizează Contact Form 7 și începeți să personalizați."
+
+#: admin/cfcf7-admin.php:33
+msgid "To explore the features in more detail, refer to the"
+msgstr "Pentru a explora în detaliu funcțiile, consultați"
+
+#: admin/cfcf7-admin.php:34 admin/cfcf7-admin.php:95
+msgid "Documentation"
+msgstr "Documentația"
+
+#: admin/cfcf7-admin.php:40
+msgid "AVAILABLE NOW!"
+msgstr "DISPONIBIL ACUM!"
+
+#: admin/cfcf7-admin.php:48
+msgid "Pro"
+msgstr "Pro"
+
+#: admin/cfcf7-admin.php:50 admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro Icon"
+msgstr "Pictogramă Stilizează Contact Form 7 Pro"
+
+#: admin/cfcf7-admin.php:55
+msgid "Would you like more options?"
+msgstr "Doriți mai multe opțiuni?"
+
+#: admin/cfcf7-admin.php:56
+msgid ""
+"This premium add-on offers a selection of animated loaders and form-submit "
+"blocks, giving you full control and elevating the contact form experience."
+msgstr ""
+"Această extensie premium oferă o selecție de încărcătoare animate și blocuri "
+"de trimitere a formularului, oferindu-vă control complet și îmbunătățind "
+"experiența formularului de contact."
+
+#: admin/cfcf7-admin.php:60
+msgid "live demo"
+msgstr "demo live"
+
+#: admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro "
+msgstr "Stilizează Contact Form 7 Pro"
+
+#: admin/cfcf7-admin.php:69
+msgid "Early Bird - discount icon"
+msgstr "Early Bird - pictogramă reducere"
+
+#: admin/cfcf7-admin.php:73
+msgid "Early Bird discount price"
+msgstr "Preț reducere Early Bird"
+
+#: admin/cfcf7-admin.php:74
+msgid "if purchased before 31st Oct 24."
+msgstr "dacă este achiziționat înainte de 31 Oct 24."
+
+#: admin/cfcf7-admin.php:82
+msgid "Buy Now"
+msgstr "Cumpără acum"
+
+#: admin/cfcf7-admin.php:98
+msgid "Get started in a few simple steps with the video demonstrations."
+msgstr "Începeți în câțiva pași simpli cu demonstrațiile video."
+
+#: admin/cfcf7-admin.php:105
+msgid "Get Support"
+msgstr "Obțineți Suport"
+
+#: admin/cfcf7-admin.php:108
+msgid "Questions answered, Problems solved!"
+msgstr "Întrebări răspunse, Probleme rezolvate!"
+
+#: admin/cfcf7-admin.php:116
+msgid "Leave Review"
+msgstr "Lăsați Recenzie"
+
+#: admin/cfcf7-admin.php:119
+msgid ""
+"If you find this plugin useful, please help it grow by leaving positive "
+"feedback!"
+msgstr ""
+"Dacă considerați acest plugin util, ajutați-l să crească lăsând un feedback "
+"pozitiv!"
+
+#: admin/cfcf7-admin.php:137
+msgid "Credits"
+msgstr "Credite"
+
+#: customizer-block-cf7.php:144
+msgid "Please add a contact form."
+msgstr "Vă rugăm să adăugați un formular de contact."
+
+#: customizer-block-cf7.php:145
+msgid "No form selected."
+msgstr "Niciun formular selectat."
+
+#: includes/cfcf7-functions.php:44 includes/cfcf7-functions.php:45
+msgid "Style CF7"
+msgstr "Stilizează CF7"
+
+#: includes/cfcf7-functions.php:92
+msgid ""
+"Style Contact Form 7 - plugin requires Contact Form 7 in order to work, So "
+"please ensure that Contact Form 7 is installed and activated!"
+msgstr ""
+"Stilizează Contact Form 7 - pluginul necesită Contact Form 7 pentru a "
+"funcționa, așa că asigurați-vă că Contact Form 7 este instalat și activat!"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Background"
+msgstr "Fundalul Blocului"
+
+#: gutenberg-block/build/index.js:1
+msgid "Background Color"
+msgstr "Culoare Fundal"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width above 781px"
+msgstr "pentru lățimea ecranului de peste 781px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width between 361px and 780px"
+msgstr "pentru lățimea ecranului între 361px și 780px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width under 360px"
+msgstr "pentru lățimea ecranului sub 360px"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Sizing"
+msgstr "Dimensiune Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Base Font Size"
+msgstr "Dimensiune Font de Bază"
+
+#: gutenberg-block/build/index.js:1
+msgid "Scale everything by adjusting the base font size."
+msgstr "Scalați totul ajustând dimensiunea fontului de bază."
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Margin"
+msgstr "Margine Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top"
+msgstr "Sus"
+
+#: gutenberg-block/build/index.js:1
+msgid "Left & Right"
+msgstr "Stânga & Dreapta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom"
+msgstr "Jos"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Padding"
+msgstr "Spațiere Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Border"
+msgstr "Chenar Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Radius"
+msgstr "Rază Bordură"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Border Outline"
+msgstr "Adaugă Contur Bordură"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Width"
+msgstr "Lățime Bordură"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Color"
+msgstr "Culoare Bordură"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Shadow"
+msgstr "Umbră Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Block shadow"
+msgstr "Afișează umbra Blocului"
+
+#: gutenberg-block/build/index.js:1
+msgid "Horizontal Offset"
+msgstr "Deplasare Orizontală"
+
+#: gutenberg-block/build/index.js:1
+msgid "Vertical Offset"
+msgstr "Deplasare Verticală"
+
+#: gutenberg-block/build/index.js:1
+msgid "Blur"
+msgstr "Estompare"
+
+#: gutenberg-block/build/index.js:1
+msgid "Spread"
+msgstr "Întindere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Color"
+msgstr "Culoare Umbră"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background"
+msgstr "Fundal Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background Color"
+msgstr "Culoare Fundal Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Labels"
+msgstr "Etichete Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Size"
+msgstr "Dimensiune Font"
+
+#: gutenberg-block/build/index.js:1
+msgid "Line Height"
+msgstr "Înălțime Linie"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text Transform"
+msgstr "Transformare Text"
+
+#: gutenberg-block/build/index.js:1
+msgid "None"
+msgstr "Niciunul"
+
+#: gutenberg-block/build/index.js:1
+msgid "Uppercase"
+msgstr "Majusculă"
+
+#: gutenberg-block/build/index.js:1
+msgid "Lowercase"
+msgstr "Minuscule"
+
+#: gutenberg-block/build/index.js:1
+msgid "Capitalize"
+msgstr "Inițiale majuscule"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Weight"
+msgstr "Greutate Font"
+
+#: gutenberg-block/build/index.js:1
+msgid "Light (300)"
+msgstr "Subțire (300)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Normal (400)"
+msgstr "Normal (400)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bold (700)"
+msgstr "Îngroșat (700)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Color"
+msgstr "Culoare Font"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text"
+msgstr "Text Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text Color"
+msgstr "Culoare Text Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Placeholder Text Color"
+msgstr "Culoare Text de Îndrumare"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Padding"
+msgstr "Spațiere Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top & Bottom"
+msgstr "Sus & Jos"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Border"
+msgstr "Chenar Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Border"
+msgstr "Afișează Chenar Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Style"
+msgstr "Stil Bordură"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Position"
+msgstr "Poziție Bordură"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Focus Outline"
+msgstr "Contur de Focalizare Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Override browser default input focus styles."
+msgstr "Suprascrie stilurile implicite de focalizare ale browserului."
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Width"
+msgstr "Lățime Contur de Focalizare"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Offset"
+msgstr "Deplasare Contur de Focalizare"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Color"
+msgstr "Culoare Contur de Focalizare"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Shadow"
+msgstr "Umbră Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Shadow"
+msgstr "Afișează Umbră Câmp"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Position"
+msgstr "Poziție Umbră"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background"
+msgstr "Fundal Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background Color"
+msgstr "Culoare Fundal Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Remove Gradient Background"
+msgstr "Elimină Fundal Gradient"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Gradient Background"
+msgstr "Adaugă Fundal Gradient"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text"
+msgstr "Text Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text transform"
+msgstr "Transformare Text"
+
+#: gutenberg-block/build/index.js:1
+msgid "Thin (100)"
+msgstr "Subțire (100)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Heavy (900)"
+msgstr "Gros (900)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text Color"
+msgstr "Culoare Text Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Width"
+msgstr "Lățime Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Padding"
+msgstr "Spațiere Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Border"
+msgstr "Chenar Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Submit Border"
+msgstr "Afișează Chenar Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Shadow"
+msgstr "Umbră Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Box Shadow"
+msgstr "Afișează Umbră Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Settings"
+msgstr "Setări Bloc"
+
+#: gutenberg-block/build/index.js:1
+msgid "Form Fields"
+msgstr "Câmpuri Formular"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Button"
+msgstr "Buton Trimitere"
+
+#: gutenberg-block/build/index.js:1
+msgid "Your form can only be submitted in the front end"
+msgstr "Formularul poate fi trimis doar din front-end"
+
+#: gutenberg-block/build/index.js:1
+msgid "Select a contact form"
+msgstr "Selectați un formular de contact"
+
+#: gutenberg-block/build/index.js:1
+msgid "Toggle contact form selector"
+msgstr "Comutați selectorul de formular de contact"
+
+#: gutenberg-block/build/block.json
+msgctxt "block title"
+msgid "Style Contact Form 7"
+msgstr "Stilizează Contact Form 7"
+
+#: gutenberg-block/build/block.json
+msgctxt "block description"
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr "Stilizează formularele tale Contact Form 7 cu ușurință."

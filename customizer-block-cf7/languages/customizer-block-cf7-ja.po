@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-15 11:39+0000\n"
+"PO-Revision-Date: 2024-02-15 11:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: 日本語\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Plugin Name of the plugin
+#: admin/cfcf7-admin.php:21 customizer-block-cf7.php:80
+#: gutenberg-block/block-functions.php:25 includes/cfcf7-functions.php:42
+#: includes/cfcf7-functions.php:44
+msgid "Customizer for Contact Form 7"
+msgstr "Contact Form 7のカスタマイザ"
+
+#. Plugin URI of the plugin
+msgid "https://stylecontactform7.com"
+msgstr "https://stylecontactform7.com"
+
+#. Description of the plugin
+msgid ""
+"This Contact Form 7 Gutenberg Block generates css styles automatically, "
+"helping you quickly create stunning contact forms!"
+msgstr ""
+"このContact Form 7 Gutenbergブロックは、CSSスタイルを自動生成し、迅速に魅力的なコンタクトフォームを作成するのに役立ちます！"
+
+#. Author of the plugin
+msgid "Mofistudio"
+msgstr "モフィスタジオ"
+
+#. Author URI of the plugin
+msgid "https://mofistudio.com/"
+msgstr "https://mofistudio.com/"
+
+#: admin/cfcf7-admin.php:18
+msgid "Admin Banner"
+msgstr "管理バナー"
+
+#: admin/cfcf7-admin.php:23
+msgid "Version 1.0.5"
+msgstr "バージョン1.0.5"
+
+#: admin/cfcf7-admin.php:31
+msgid "Profile Picture"
+msgstr "プロフィール写真"
+
+#: admin/cfcf7-admin.php:32
+msgid "Thank you for installing this plugin."
+msgstr "このプラグインをインストールしていただきありがとうございます。"
+
+#: admin/cfcf7-admin.php:33
+msgid ""
+"If you find it useful then you can support the project by leaving a review "
+"or purchasing \"Animations for Contact Form 7\" plugin for only $5, details "
+"and links below."
+msgstr ""
+"役立つと思われる場合は、レビューを残すか、「Contact Form "
+"7用アニメーション」プラグインを5ドルで購入することでプロジェクトをサポートできます。詳細とリンクは以下の通りです。"
+
+#: admin/cfcf7-admin.php:37
+msgid ""
+"Dive into another level of functionality with this newly released Contact "
+"Form 7 add-on"
+msgstr "この新しくリリースされたContact Form 7アドオンで、さらなる機能レベルに飛び込みましょう"
+
+#: admin/cfcf7-admin.php:37
+msgid "Animations for Contact Form 7"
+msgstr "Contact Form 7のためのアニメーション"
+
+#: admin/cfcf7-admin.php:37
+msgid ""
+"It will enhance your forms with engaging animated popup messages that will "
+"delight your users, or"
+msgstr "ユーザーを喜ばせる魅力的なアニメーションポップアップメッセージでフォームを強化します。"
+
+#: admin/cfcf7-admin.php:37
+msgid "click here"
+msgstr "ここをクリック"
+
+#: admin/cfcf7-admin.php:37
+msgid "for live demo."
+msgstr "ライブデモのために。"
+
+#: admin/cfcf7-admin.php:50
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#: admin/cfcf7-admin.php:53
+msgid "Get started in a few simple steps with the video demonstrations."
+msgstr "ビデオデモを使って、いくつかの簡単なステップで始めましょう。"
+
+#: admin/cfcf7-admin.php:60
+msgid "Get Support"
+msgstr "サポートを受ける"
+
+#: admin/cfcf7-admin.php:63
+msgid "Get in touch If you are having problems with this plugin."
+msgstr "このプラグインに問題がある場合は、お問い合わせください。"
+
+#: admin/cfcf7-admin.php:70
+msgid "Leave Review"
+msgstr "レビューを残す"
+
+#: admin/cfcf7-admin.php:73
+msgid "Please take a moment to leave some positive feedback!"
+msgstr "肯定的なフィードバックを残すために、少し時間を取ってください！"
+
+#: admin/cfcf7-admin.php:85
+msgid "Credits"
+msgstr "クレジット"
+
+#: customizer-block-cf7.php:81 gutenberg-block/block-functions.php:26
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr "Contact Form 7のフォームを簡単にスタイリングしましょう。"
+
+#: customizer-block-cf7.php:138 customizer-block-cf7.php:170
+#: gutenberg-block/block-functions.php:87
+#: gutenberg-block/block-functions.php:119
+msgid "No form selected."
+msgstr "フォームが選択されていません。"
+
+#: customizer-block-cf7.php:155 gutenberg-block/block-functions.php:104
+msgid "Please add a contact form."
+msgstr "コンタクトフォームを追加してください。"
+
+#: includes/cfcf7-functions.php:92
+msgid ""
+"Customizer Block for Contact Form 7 plugin requires Contact Form 7 in order "
+"to work, So please ensure that Contact Form 7 is installed and activated!"
+msgstr ""
+"Contact Form 7プラグイン用カスタマイザーブロックは、動作するためにContact Form 7が必要です。したがって、Contact "
+"Form 7がインストールされ、アクティブ化されていることを確認してください！"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Background"
+msgstr "ブロックの背景"
+
+#: gutenberg-block/build/index.js:1
+msgid "Background Color"
+msgstr "背景色"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width above 781px"
+msgstr "画面幅が781px以上の場合"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width between 361px and 780px"
+msgstr "画面幅が361pxから780pxの場合"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width under 360px"
+msgstr "画面幅が360px未満の場合"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Sizing"
+msgstr "ブロックサイジング"
+
+#: gutenberg-block/build/index.js:1
+msgid "Base Font Size"
+msgstr "ベースフォントサイズ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Scale everything by adjusting the base font size."
+msgstr "ベースフォントサイズを調整して全てをスケールします。"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Margin"
+msgstr "ブロックマージン"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top"
+msgstr "上"
+
+#: gutenberg-block/build/index.js:1
+msgid "Left & Right"
+msgstr "左右"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom"
+msgstr "下"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Padding"
+msgstr "ブロックパディング"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Border"
+msgstr "ブロックボーダー"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top Left Corner Radius"
+msgstr "左上のコーナー半径"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top Right Corner Radius"
+msgstr "右上のコーナー半径"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom Left Corner Radius"
+msgstr "左下のコーナー半径"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom Right Corner Radius"
+msgstr "右下のコーナー半径"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show / Hide block border"
+msgstr "ブロックボーダーの表示/非表示"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Width"
+msgstr "ボーダーの幅"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Color"
+msgstr "ボーダーの色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Shadow"
+msgstr "ブロックシャドウ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Block shadow"
+msgstr "ブロックシャドウを表示"
+
+#: gutenberg-block/build/index.js:1
+msgid "Horizontal Offset"
+msgstr "水平オフセット"
+
+#: gutenberg-block/build/index.js:1
+msgid "Vertical Offset"
+msgstr "垂直オフセット"
+
+#: gutenberg-block/build/index.js:1
+msgid "Blur"
+msgstr "ぼかし"
+
+#: gutenberg-block/build/index.js:1
+msgid "Spread"
+msgstr "拡散"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Color"
+msgstr "シャドウの色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background"
+msgstr "フィールドの背景"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background Color"
+msgstr "フィールドの背景色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Labels"
+msgstr "フィールドラベル"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text transform"
+msgstr "テキスト変換"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Weight"
+msgstr "フォントの太さ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Size"
+msgstr "フォントサイズ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Line Height"
+msgstr "行の高さ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Color"
+msgstr "フォントの色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text"
+msgstr "フィールドテキスト"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field text color"
+msgstr "フィールドテキストの色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Placeholder text color"
+msgstr "プレースホルダーテキストの色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Padding"
+msgstr "フィールドパディング"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top & Bottom"
+msgstr "上下"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Border"
+msgstr "フィールドボーダー"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Radius"
+msgstr "ボーダー半径"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Border"
+msgstr "フィールドボーダーを表示"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Style"
+msgstr "ボーダースタイル"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Position"
+msgstr "ボーダー位置"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Shadow"
+msgstr "フィールドシャドウ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Shadow"
+msgstr "フィールドシャドウを表示"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background"
+msgstr "送信背景"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background Color"
+msgstr "送信背景色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text"
+msgstr "送信テキスト"
+
+#: gutenberg-block/build/index.js:1
+msgid "submit text color"
+msgstr "送信テキストの色"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Width"
+msgstr "送信幅"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Padding"
+msgstr "送信パディング"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Border"
+msgstr "送信ボーダー"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Submit Border"
+msgstr "送信ボーダーを表示"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Shadow"
+msgstr "送信シャドウ"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Box Shadow"
+msgstr "ボックスシャドウを表示"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Settings"
+msgstr "ブロック設定"
+
+#: gutenberg-block/build/index.js:1
+msgid "Form Fields"
+msgstr "フォームフィールド"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Button"
+msgstr "送信ボタン"
+
+#: gutenberg-block/build/index.js:1
+msgid "Your form can only be submitted in the front end"
+msgstr "フォームはフロントエンドでのみ送信できます"
+
+#: gutenberg-block/build/index.js:1
+msgid "Select a contact form"
+msgstr "コンタクトフォームを選択"
+
+#: gutenberg-block/build/index.js:1
+msgid "Toggle contact form selector"
+msgstr "コンタクトフォームセレクターを切り替える"
+
+#: gutenberg-block/build/block.json
+msgctxt "block title"
+msgid "Customizer for Contact Form 7"
+msgstr "Contact Form 7のカスタマイザ"
+
+#: gutenberg-block/build/block.json
+msgctxt "block description"
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr "Contact Form 7フォームを簡単にスタイル設定。"

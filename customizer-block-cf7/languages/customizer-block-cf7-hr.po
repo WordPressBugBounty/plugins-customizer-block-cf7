@@ -1,0 +1,509 @@
+# Copyright (C) 2024 Mofistudio
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Contact Form 7 1.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/customizer-block-"
+"cf7\n"
+"Last-Translator: \n"
+"Language-Team: Croatian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-01T23:16:41+02:00\n"
+"PO-Revision-Date: 2024-10-02 00:47+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: customizer-block-cf7\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2;\n"
+"X-Loco-Version: 2.6.11; wp-6.6.3-alpha-59007"
+
+#. Plugin Name of the plugin
+#: admin/cfcf7-admin.php:22 admin/cfcf7-admin.php:47
+msgid "Style Contact Form 7"
+msgstr "Stiliziraj Contact Form 7"
+
+#. Plugin URI of the plugin
+msgid "https://stylecontactform7.com"
+msgstr "https://stylecontactform7.com"
+
+#. Description of the plugin
+msgid ""
+"This Contact Form 7 compatible Gutenberg Block automates CSS style "
+"generation allowing you to quickly design visually appealing contact forms "
+"with minimal setup."
+msgstr ""
+"Ovaj Gutenberg blok kompatibilan s Contact Form 7 automatski generira CSS "
+"stilove omogućujući vam brzo dizajniranje vizualno privlačnih kontaktnih "
+"obrazaca uz minimalno podešavanje."
+
+#. Author of the plugin
+msgid "Mofistudio"
+msgstr "Mofistudio"
+
+#. Author URI of the plugin
+msgid "https://mofistudio.com/"
+msgstr "https://mofistudio.com/"
+
+#: admin/cfcf7-admin.php:19
+msgid "Admin Banner"
+msgstr "Admin Banner"
+
+#: admin/cfcf7-admin.php:24
+msgid "Version 1.1.7"
+msgstr "Verzija 1.1.7"
+
+#: admin/cfcf7-admin.php:25
+msgid "Updates"
+msgstr "Ažuriranja"
+
+#: admin/cfcf7-admin.php:29
+msgid "Style Contact Form 7 Icon"
+msgstr "Ikona Stiliziraj Contact Form 7"
+
+#: admin/cfcf7-admin.php:32
+msgid ""
+"This plugin integrates perfectly with Contact Form 7, making it simple to "
+"create beautiful contact forms with Gutenberg blocks."
+msgstr ""
+"Ovaj dodatak se savršeno integrira s Contact Form 7, omogućujući vam "
+"jednostavno kreiranje prekrasnih kontaktnih obrazaca pomoću Gutenberg "
+"blokova."
+
+#: admin/cfcf7-admin.php:33
+msgid ""
+"You have the freedom to style multiple elements of the form. With user-"
+"friendly controls arranged in a logical sequence, you can easily insert the "
+"Style Contact Form 7 block and start customizing."
+msgstr ""
+"Imate slobodu stilizirati više elemenata obrasca. Uz korisnički prilagođene "
+"kontrole raspoređene u logičnom slijedu, lako možete umetnuti blok "
+"Stiliziraj Contact Form 7 i početi prilagođavati."
+
+#: admin/cfcf7-admin.php:33
+msgid "To explore the features in more detail, refer to the"
+msgstr "Za detaljniji pregled značajki, pogledajte"
+
+#: admin/cfcf7-admin.php:34 admin/cfcf7-admin.php:95
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+#: admin/cfcf7-admin.php:40
+msgid "AVAILABLE NOW!"
+msgstr "DOSTUPNO SADA!"
+
+#: admin/cfcf7-admin.php:48
+msgid "Pro"
+msgstr "Pro"
+
+#: admin/cfcf7-admin.php:50 admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro Icon"
+msgstr "Ikona Stiliziraj Contact Form 7 Pro"
+
+#: admin/cfcf7-admin.php:55
+msgid "Would you like more options?"
+msgstr "Želite li više opcija?"
+
+#: admin/cfcf7-admin.php:56
+msgid ""
+"This premium add-on offers a selection of animated loaders and form-submit "
+"blocks, giving you full control and elevating the contact form experience."
+msgstr ""
+"Ovaj premium dodatak nudi izbor animiranih učitavača i blokova za slanje "
+"obrasca, dajući vam potpunu kontrolu i poboljšavajući iskustvo kontaktnih "
+"obrazaca."
+
+#: admin/cfcf7-admin.php:60
+msgid "live demo"
+msgstr "uživo demo"
+
+#: admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro "
+msgstr "Stiliziraj Contact Form 7 Pro"
+
+#: admin/cfcf7-admin.php:69
+msgid "Early Bird - discount icon"
+msgstr "Rani Ptić - ikona popusta"
+
+#: admin/cfcf7-admin.php:73
+msgid "Early Bird discount price"
+msgstr "Rani Ptić cijena s popustom"
+
+#: admin/cfcf7-admin.php:74
+msgid "if purchased before 31st Oct 24."
+msgstr "ako se kupi prije 31. listopada 24."
+
+#: admin/cfcf7-admin.php:82
+msgid "Buy Now"
+msgstr "Kupi Sada"
+
+#: admin/cfcf7-admin.php:98
+msgid "Get started in a few simple steps with the video demonstrations."
+msgstr "Započnite u nekoliko jednostavnih koraka s video demonstracijama."
+
+#: admin/cfcf7-admin.php:105
+msgid "Get Support"
+msgstr "Dobiti Podršku"
+
+#: admin/cfcf7-admin.php:108
+msgid "Questions answered, Problems solved!"
+msgstr "Pitanja odgovorena, problemi riješeni!"
+
+#: admin/cfcf7-admin.php:116
+msgid "Leave Review"
+msgstr "Ostavite Recenziju"
+
+#: admin/cfcf7-admin.php:119
+msgid ""
+"If you find this plugin useful, please help it grow by leaving positive "
+"feedback!"
+msgstr ""
+"Ako smatrate da je ovaj dodatak koristan, pomozite mu da raste ostavljanjem "
+"pozitivne povratne informacije!"
+
+#: admin/cfcf7-admin.php:137
+msgid "Credits"
+msgstr "Zasluge"
+
+#: customizer-block-cf7.php:144
+msgid "Please add a contact form."
+msgstr "Molimo dodajte kontaktni obrazac."
+
+#: customizer-block-cf7.php:145
+msgid "No form selected."
+msgstr "Obrazac nije odabran."
+
+#: includes/cfcf7-functions.php:44 includes/cfcf7-functions.php:45
+msgid "Style CF7"
+msgstr "Stil CF7"
+
+#: includes/cfcf7-functions.php:92
+msgid ""
+"Style Contact Form 7 - plugin requires Contact Form 7 in order to work, So "
+"please ensure that Contact Form 7 is installed and activated!"
+msgstr ""
+"Stiliziraj Contact Form 7 - dodatak zahtijeva Contact Form 7 da bi radio, "
+"stoga provjerite je li Contact Form 7 instaliran i aktiviran!"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Background"
+msgstr "Pozadina Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Background Color"
+msgstr "Boja Pozadine"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width above 781px"
+msgstr "za širinu zaslona iznad 781px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width between 361px and 780px"
+msgstr "za širinu zaslona između 361px i 780px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width under 360px"
+msgstr "za širinu zaslona ispod 360px"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Sizing"
+msgstr "Veličina Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Base Font Size"
+msgstr "Osnovna Veličina Fonta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Scale everything by adjusting the base font size."
+msgstr "Prilagodite sve podešavanjem osnovne veličine fonta."
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Margin"
+msgstr "Margina Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top"
+msgstr "Vrh"
+
+#: gutenberg-block/build/index.js:1
+msgid "Left & Right"
+msgstr "Lijevo i Desno"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom"
+msgstr "Dno"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Padding"
+msgstr "Unutarnji Razmak Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Border"
+msgstr "Obrub Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Radius"
+msgstr "Radijus Obruba"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Border Outline"
+msgstr "Dodajte Obrubnu Crtu"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Width"
+msgstr "Širina Obruba"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Color"
+msgstr "Boja Obruba"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Shadow"
+msgstr "Sjena Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Block shadow"
+msgstr "Prikaži Sjena Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Horizontal Offset"
+msgstr "Vodoravni Pomak"
+
+#: gutenberg-block/build/index.js:1
+msgid "Vertical Offset"
+msgstr "Okomiti Pomak"
+
+#: gutenberg-block/build/index.js:1
+msgid "Blur"
+msgstr "Zamućenje"
+
+#: gutenberg-block/build/index.js:1
+msgid "Spread"
+msgstr "Raspršenje"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Color"
+msgstr "Boja Sjene"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background"
+msgstr "Pozadina Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background Color"
+msgstr "Boja Pozadine Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Labels"
+msgstr "Oznake Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Size"
+msgstr "Veličina Fonta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Line Height"
+msgstr "Visina Linije"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text Transform"
+msgstr "Transformacija Teksta"
+
+#: gutenberg-block/build/index.js:1
+msgid "None"
+msgstr "Nijedan"
+
+#: gutenberg-block/build/index.js:1
+msgid "Uppercase"
+msgstr "Velika Slova"
+
+#: gutenberg-block/build/index.js:1
+msgid "Lowercase"
+msgstr "Mala Slova"
+
+#: gutenberg-block/build/index.js:1
+msgid "Capitalize"
+msgstr "Veliko Prvo Slovo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Weight"
+msgstr "Debljina Fonta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Light (300)"
+msgstr "Tanki (300)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Normal (400)"
+msgstr "Normalni (400)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bold (700)"
+msgstr "Podebljani (700)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Color"
+msgstr "Boja Fonta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text"
+msgstr "Tekst Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text Color"
+msgstr "Boja Teksta Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Placeholder Text Color"
+msgstr "Boja Teksta Unosa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Padding"
+msgstr "Unutarnji Razmak Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top & Bottom"
+msgstr "Gore & Dole"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Border"
+msgstr "Obrub Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Border"
+msgstr "Prikaži Obrub Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Style"
+msgstr "Stil Obruba"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Position"
+msgstr "Položaj Obruba"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Focus Outline"
+msgstr "Obris Fokusa Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Override browser default input focus styles."
+msgstr "Zanemari zadane stilove fokusa preglednika."
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Width"
+msgstr "Širina Obrisa Fokusa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Offset"
+msgstr "Pomak Obrisa Fokusa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Color"
+msgstr "Boja Obrisa Fokusa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Shadow"
+msgstr "Sjena Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Shadow"
+msgstr "Prikaži Sjenu Polja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Position"
+msgstr "Položaj Sjene"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background"
+msgstr "Pozadina Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background Color"
+msgstr "Boja Pozadine Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Remove Gradient Background"
+msgstr "Ukloni Gradijentnu Pozadinu"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Gradient Background"
+msgstr "Dodaj Gradijentnu Pozadinu"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text"
+msgstr "Tekst Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text transform"
+msgstr "Transformacija Teksta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Thin (100)"
+msgstr "Vrlo Tanak (100)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Heavy (900)"
+msgstr "Vrlo Debeo (900)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text Color"
+msgstr "Boja Teksta Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Width"
+msgstr "Širina Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Padding"
+msgstr "Unutarnji Razmak Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Border"
+msgstr "Obrub Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Submit Border"
+msgstr "Prikaži Obrub Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Shadow"
+msgstr "Sjena Slanja"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Box Shadow"
+msgstr "Prikaži Sjena Kutije"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Settings"
+msgstr "Postavke Bloka"
+
+#: gutenberg-block/build/index.js:1
+msgid "Form Fields"
+msgstr "Polja Obrasca"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Button"
+msgstr "Gumb za Slanje"
+
+#: gutenberg-block/build/index.js:1
+msgid "Your form can only be submitted in the front end"
+msgstr "Vaš obrazac se može poslati samo na prednjoj strani"
+
+#: gutenberg-block/build/index.js:1
+msgid "Select a contact form"
+msgstr "Odaberite kontaktni obrazac"
+
+#: gutenberg-block/build/index.js:1
+msgid "Toggle contact form selector"
+msgstr "Prebacite odabirnik kontaktnih obrazaca"
+
+#: gutenberg-block/build/block.json
+msgctxt "block title"
+msgid "Style Contact Form 7"
+msgstr "Stiliziraj Contact Form 7"
+
+#: gutenberg-block/build/block.json
+msgctxt "block description"
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr "Jednostavno stilizirajte svoje Contact Form 7 obrasce."

@@ -1,0 +1,394 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "mofistudio/customizer-block-cf7",
+  "version": "1.2",
+  "title": "Style Contact Form 7",
+  "category": "widgets",
+  "description": "Style your Contact Form 7 forms with Ease.",
+  "attributes": {
+    "previewmode": {
+      "type": "string",
+      "default": "Desktop"
+    },
+    "form_selector_toggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "contact_form": {
+      "type": "string"
+    },
+    "successMessage": {
+      "type": "string"
+    },
+    "block_bg_color": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "base_font_size": {
+      "type": "number",
+      "default": 16
+    },
+    "base_font_size_tablet": {
+      "type": "number",
+      "default": 16
+    },
+    "base_font_size_mobile": {
+      "type": "number",
+      "default": 16
+    },
+    "padding_top": {
+      "type": "number",
+      "default": 2
+    },
+    "padding_sides": {
+      "type": "number",
+      "default": 3
+    },
+    "padding_bottom": {
+      "type": "number",
+      "default": 2
+    },
+    "padding_top_tablet": {
+      "type": "number",
+      "default": 1.6
+    },
+    "padding_sides_tablet": {
+      "type": "number",
+      "default": 2.2
+    },
+    "padding_bottom_tablet": {
+      "type": "number",
+      "default": 1.6
+    },
+    "padding_top_mobile": {
+      "type": "number",
+      "default": 2
+    },
+    "padding_sides_mobile": {
+      "type": "number",
+      "default": 1.5
+    },
+    "padding_bottom_mobile": {
+      "type": "number",
+      "default": 2
+    },
+    "margin_top": {
+      "type": "number",
+      "default": 0
+    },
+    "margin_sides": {
+      "type": "number",
+      "default": 0
+    },
+    "margin_bottom": {
+      "type": "number",
+      "default": 0
+    },
+    "margin_top_tablet": {
+      "type": "number",
+      "default": 0
+    },
+    "margin_sides_tablet": {
+      "type": "number",
+      "default": 0
+    },
+    "margin_bottom_tablet": {
+      "type": "number",
+      "default": 0
+    },
+    "margin_top_mobile": {
+      "type": "number",
+      "default": 1
+    },
+    "margin_sides_mobile": {
+      "type": "number",
+      "default": -0.5
+    },
+    "margin_bottom_mobile": {
+      "type": "number",
+      "default": 1
+    },
+    "block_border_radius": {
+      "type": "number",
+      "default": 2
+    },
+    "top_left_corner": {
+      "type": "number",
+      "default": 1
+    },
+    "top_right_corner": {
+      "type": "number",
+      "default": 1
+    },
+    "bottom_left_corner": {
+      "type": "number",
+      "default": 1
+    },
+    "bottom_right_corner": {
+      "type": "number",
+      "default": 1
+    },
+    "show_box_shadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "block_h_offset": {
+      "type": "number",
+      "default": 0
+    },
+    "block_v_offset": {
+      "type": "number",
+      "default": 0.5
+    },
+    "block_blur": {
+      "type": "number",
+      "default": 5
+    },
+    "block_spread": {
+      "type": "number",
+      "default": -3
+    },
+    "block_shadow_color": {
+      "type": "string",
+      "default": "black"
+    },
+    "show_block_border": {
+      "type": "boolean",
+      "default": false
+    },
+    "block_border_width": {
+      "type": "number",
+      "default": 0.4
+    },
+    "block_border_color": {
+      "type": "string",
+      "default": "black"
+    },
+    "field_bg_color": {
+      "type": "string",
+      "default": "#f4f4f4"
+    },
+    "field_bg_focus": {
+      "type": "string",
+      "default": ""
+    },
+    "label_font_size": {
+      "type": "number",
+      "default": 1.1
+    },
+    "label_line_height": {
+      "type": "number",
+      "default": 2
+    },
+    "label_color": {
+      "type": "string",
+      "default": "#8C8E98"
+    },
+    "label_case": {
+      "type": "string"
+    },
+    "label_font_weight": {
+      "type": "string",
+      "default": "400"
+    },
+    "field_font_size": {
+      "type": "number",
+      "default": 1
+    },
+    "field_text_color": {
+      "type": "string",
+      "default": "#545054"
+    },
+    "placeholder_text_color": {
+      "type": "string",
+      "default": "#C9C9C9"
+    },
+    "field_padding_top_bottom": {
+      "type": "number",
+      "default": 0.6
+    },
+    "field_padding_left_right": {
+      "type": "number",
+      "default": 0.6
+    },
+    "field_border_radius": {
+      "type": "number",
+      "default": 0.5
+    },
+    "show_field_border": {
+      "type": "boolean",
+      "default": false
+    },
+    "field_border_width": {
+      "type": "number",
+      "default": 1
+    },
+    "field_border_style": {
+      "type": "string",
+      "default": "solid"
+    },
+    "field_border_color": {
+      "type": "string",
+      "default": "#dcdcdc"
+    },
+    "field_border_sides": {
+      "type": "string",
+      "default": "all"
+    },
+    "show_field_focus": {
+      "type": "boolean",
+      "default": true
+    },
+    "field_focus_outline_width": {
+      "type": "number",
+      "default": 1
+    },
+    "field_focus_outline_offset": {
+      "type": "number",
+      "default": 1
+    },
+    "field_focus_outline_color": {
+      "type": "string",
+      "default": "#403B40"
+    },
+    "show_field_box_shadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "field_h_offset": {
+      "type": "number",
+      "default": 0
+    },
+    "field_v_offset": {
+      "type": "number",
+      "default": 0.1
+    },
+    "field_blur": {
+      "type": "number",
+      "default": 1
+    },
+    "field_spread": {
+      "type": "number",
+      "default": -0.9
+    },
+    "field_shadow_color": {
+      "type": "string",
+      "default": "#403b40"
+    },
+    "field_shadow_position": {
+      "type": "string",
+      "default": "inset"
+    },
+    "submit_bg_color": {
+      "type": "string",
+      "default": "#403b40"
+    },
+    "show_gradient_picker": {
+      "type": "boolean",
+      "default": false
+    },
+    "submit_bg_gradient": {
+      "type": "string",
+      "default": "linear-gradient(0deg,rgb(155,81,224) 0%,rgb(215,82,233) 99%)"
+    },
+    "submit_font_size": {
+      "type": "number",
+      "default": 1
+    },
+    "submit_font_case": {
+      "type": "string",
+      "default": "capitalize"
+    },
+    "submit_font_weight": {
+      "type": "string",
+      "default": "400"
+    },
+    "submit_text_color": {
+      "type": "string",
+      "default": "white"
+    },
+    "submit_padding_top_bottom": {
+      "type": "number",
+      "default": 0.9
+    },
+    "submit_padding_left_right": {
+      "type": "number",
+      "default": 4
+    },
+    "submit_margin_top_bottom": {
+      "type": "number",
+      "default": 0
+    },
+    "submit_margin_left_right": {
+      "type": "number",
+      "default": 0
+    },
+    "submit_width": {
+      "type": "string",
+      "default": "100"
+    },
+    "submit_width_tablet": {
+      "type": "string",
+      "default": "100"
+    },
+    "submit_width_mobile": {
+      "type": "string",
+      "default": "100"
+    },
+    "submit_border_radius": {
+      "type": "number",
+      "default": 0.5
+    },
+    "show_submit_border": {
+      "type": "boolean",
+      "default": false
+    },
+    "submit_border_width": {
+      "type": "number",
+      "default": 1
+    },
+    "submit_border_color": {
+      "type": "string",
+      "default": "red"
+    },
+    "show_submit_shadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "submit_h_offset": {
+      "type": "number",
+      "default": 0
+    },
+    "submit_v_offset": {
+      "type": "number",
+      "default": 0.3
+    },
+    "submit_blur": {
+      "type": "number",
+      "default": 1
+    },
+    "submit_spread": {
+      "type": "number",
+      "default": -0.6
+    },
+    "submit_shadow_color": {
+      "type": "string",
+      "default": "grey"
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": false
+  },
+  "example": {
+    "attributes": {
+      "form_selector_toggle": false
+    }
+  },
+  "textdomain": "customizer-block-cf7",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "script": "file:./view.js"
+}

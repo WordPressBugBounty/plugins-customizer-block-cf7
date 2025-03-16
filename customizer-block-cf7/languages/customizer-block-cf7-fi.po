@@ -1,0 +1,508 @@
+# Copyright (C) 2024 Mofistudio
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Contact Form 7 1.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/customizer-block-"
+"cf7\n"
+"Last-Translator: \n"
+"Language-Team: Finnish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-01T23:16:41+02:00\n"
+"PO-Revision-Date: 2024-10-02 00:14+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: customizer-block-cf7\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.11; wp-6.6.3-alpha-59007"
+
+#. Plugin Name of the plugin
+#: admin/cfcf7-admin.php:22 admin/cfcf7-admin.php:47
+msgid "Style Contact Form 7"
+msgstr "Style Contact Form 7"
+
+#. Plugin URI of the plugin
+msgid "https://stylecontactform7.com"
+msgstr "https://stylecontactform7.com"
+
+#. Description of the plugin
+msgid ""
+"This Contact Form 7 compatible Gutenberg Block automates CSS style "
+"generation allowing you to quickly design visually appealing contact forms "
+"with minimal setup."
+msgstr ""
+"Tämä Contact Form 7 -yhteensopiva Gutenberg-lohko automatisoi CSS-tyylien "
+"luomisen, jonka avulla voit suunnitella visuaalisesti houkuttelevia "
+"yhteydenottolomakkeita nopeasti ja vähäisellä asetuksella."
+
+#. Author of the plugin
+msgid "Mofistudio"
+msgstr "Mofistudio"
+
+#. Author URI of the plugin
+msgid "https://mofistudio.com/"
+msgstr "https://mofistudio.com/"
+
+#: admin/cfcf7-admin.php:19
+msgid "Admin Banner"
+msgstr "Ylläpitäjän banneri"
+
+#: admin/cfcf7-admin.php:24
+msgid "Version 1.1.7"
+msgstr "Versio 1.1.7"
+
+#: admin/cfcf7-admin.php:25
+msgid "Updates"
+msgstr "Päivitykset"
+
+#: admin/cfcf7-admin.php:29
+msgid "Style Contact Form 7 Icon"
+msgstr "Style Contact Form 7 -ikoni"
+
+#: admin/cfcf7-admin.php:32
+msgid ""
+"This plugin integrates perfectly with Contact Form 7, making it simple to "
+"create beautiful contact forms with Gutenberg blocks."
+msgstr ""
+"Tämä laajennus integroituu täydellisesti Contact Form 7:n kanssa, mikä tekee "
+"kauniiden yhteydenottolomakkeiden luomisesta helppoa Gutenberg-lohkoilla."
+
+#: admin/cfcf7-admin.php:33
+msgid ""
+"You have the freedom to style multiple elements of the form. With user-"
+"friendly controls arranged in a logical sequence, you can easily insert the "
+"Style Contact Form 7 block and start customizing."
+msgstr ""
+"Sinulla on vapaus muokata lomakkeen useita elementtejä. "
+"Käyttäjäystävällisten ohjaimien ansiosta, jotka on järjestetty loogiseen "
+"järjestykseen, voit helposti lisätä Style Contact Form 7 -lohkon ja aloittaa "
+"mukauttamisen."
+
+#: admin/cfcf7-admin.php:33
+msgid "To explore the features in more detail, refer to the"
+msgstr "Lisätietoja ominaisuuksista löydät"
+
+#: admin/cfcf7-admin.php:34 admin/cfcf7-admin.php:95
+msgid "Documentation"
+msgstr "Dokumentaatio"
+
+#: admin/cfcf7-admin.php:40
+msgid "AVAILABLE NOW!"
+msgstr "SAATAVILLA NYT!"
+
+#: admin/cfcf7-admin.php:48
+msgid "Pro"
+msgstr "Pro"
+
+#: admin/cfcf7-admin.php:50 admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro Icon"
+msgstr "Style Contact Form 7 Pro -ikoni"
+
+#: admin/cfcf7-admin.php:55
+msgid "Would you like more options?"
+msgstr "Haluatko lisää vaihtoehtoja?"
+
+#: admin/cfcf7-admin.php:56
+msgid ""
+"This premium add-on offers a selection of animated loaders and form-submit "
+"blocks, giving you full control and elevating the contact form experience."
+msgstr ""
+"Tämä premium-laajennus tarjoaa valikoiman animoituja latauskuvakkeita ja "
+"lomakkeen lähetyspainikkeita, antaen sinulle täyden hallinnan ja parantaen "
+"yhteydenottolomakkeen käyttökokemusta."
+
+#: admin/cfcf7-admin.php:60
+msgid "live demo"
+msgstr "live-demo"
+
+#: admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro "
+msgstr "Style Contact Form 7 Pro"
+
+#: admin/cfcf7-admin.php:69
+msgid "Early Bird - discount icon"
+msgstr "Early Bird -alennusikoni"
+
+#: admin/cfcf7-admin.php:73
+msgid "Early Bird discount price"
+msgstr "Early Bird -alennushinta"
+
+#: admin/cfcf7-admin.php:74
+msgid "if purchased before 31st Oct 24."
+msgstr "jos ostettu ennen 31. lokakuuta 24."
+
+#: admin/cfcf7-admin.php:82
+msgid "Buy Now"
+msgstr "Osta nyt"
+
+#: admin/cfcf7-admin.php:98
+msgid "Get started in a few simple steps with the video demonstrations."
+msgstr "Aloita muutamalla yksinkertaisella askeleella videodemojen avulla."
+
+#: admin/cfcf7-admin.php:105
+msgid "Get Support"
+msgstr "Hanki tukea"
+
+#: admin/cfcf7-admin.php:108
+msgid "Questions answered, Problems solved!"
+msgstr "Kysymyksiin vastattu, ongelmat ratkaistu!"
+
+#: admin/cfcf7-admin.php:116
+msgid "Leave Review"
+msgstr "Jätä arvostelu"
+
+#: admin/cfcf7-admin.php:119
+msgid ""
+"If you find this plugin useful, please help it grow by leaving positive "
+"feedback!"
+msgstr ""
+"Jos koet tämän laajennuksen hyödylliseksi, auta sitä kasvamaan jättämällä "
+"positiivista palautetta!"
+
+#: admin/cfcf7-admin.php:137
+msgid "Credits"
+msgstr "Tunnustukset"
+
+#: customizer-block-cf7.php:144
+msgid "Please add a contact form."
+msgstr "Lisää yhteydenottolomake."
+
+#: customizer-block-cf7.php:145
+msgid "No form selected."
+msgstr "Lomaketta ei ole valittu."
+
+#: includes/cfcf7-functions.php:44 includes/cfcf7-functions.php:45
+msgid "Style CF7"
+msgstr "Style CF7"
+
+#: includes/cfcf7-functions.php:92
+msgid ""
+"Style Contact Form 7 - plugin requires Contact Form 7 in order to work, So "
+"please ensure that Contact Form 7 is installed and activated!"
+msgstr ""
+"Style Contact Form 7 -laajennus vaatii toimiakseen Contact Form 7:n, "
+"varmista siis, että Contact Form 7 on asennettu ja aktivoitu!"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Background"
+msgstr "Lohkon tausta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Background Color"
+msgstr "Taustaväri"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width above 781px"
+msgstr "näytön leveydelle yli 781px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width between 361px and 780px"
+msgstr "näytön leveydelle välillä 361px ja 780px"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width under 360px"
+msgstr "näytön leveydelle alle 360px"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Sizing"
+msgstr "Lohkon koko"
+
+#: gutenberg-block/build/index.js:1
+msgid "Base Font Size"
+msgstr "Perusfontin koko"
+
+#: gutenberg-block/build/index.js:1
+msgid "Scale everything by adjusting the base font size."
+msgstr "Skaalaa kaikki säätämällä perusfontin kokoa."
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Margin"
+msgstr "Lohkon marginaali"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top"
+msgstr "Yläosa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Left & Right"
+msgstr "Vasen & Oikea"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom"
+msgstr "Alaosa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Padding"
+msgstr "Lohkon täyte"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Border"
+msgstr "Lohkon reuna"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Radius"
+msgstr "Reunan säde"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Border Outline"
+msgstr "Lisää reunaviiva"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Width"
+msgstr "Reunan leveys"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Color"
+msgstr "Reunan väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Shadow"
+msgstr "Lohkon varjo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Block shadow"
+msgstr "Näytä lohkon varjo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Horizontal Offset"
+msgstr "Vaakasuuntainen siirto"
+
+#: gutenberg-block/build/index.js:1
+msgid "Vertical Offset"
+msgstr "Pystysuuntainen siirto"
+
+#: gutenberg-block/build/index.js:1
+msgid "Blur"
+msgstr "Sumeus"
+
+#: gutenberg-block/build/index.js:1
+msgid "Spread"
+msgstr "Leviäminen"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Color"
+msgstr "Varjon väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background"
+msgstr "Kentän tausta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background Color"
+msgstr "Kentän taustaväri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Labels"
+msgstr "Kentän etiketit"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Size"
+msgstr "Fontin koko"
+
+#: gutenberg-block/build/index.js:1
+msgid "Line Height"
+msgstr "Rivikorkeus"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text Transform"
+msgstr "Tekstin muunnos"
+
+#: gutenberg-block/build/index.js:1
+msgid "None"
+msgstr "Ei mitään"
+
+#: gutenberg-block/build/index.js:1
+msgid "Uppercase"
+msgstr "Isoilla kirjaimilla"
+
+#: gutenberg-block/build/index.js:1
+msgid "Lowercase"
+msgstr "Pienillä kirjaimilla"
+
+#: gutenberg-block/build/index.js:1
+msgid "Capitalize"
+msgstr "Isolla alkukirjaimella"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Weight"
+msgstr "Fontin paino"
+
+#: gutenberg-block/build/index.js:1
+msgid "Light (300)"
+msgstr "Kevyt (300)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Normal (400)"
+msgstr "Normaali (400)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Bold (700)"
+msgstr "Lihavoitu (700)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Color"
+msgstr "Fontin väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text"
+msgstr "Kentän teksti"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text Color"
+msgstr "Kentän tekstin väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Placeholder Text Color"
+msgstr "Paikkamerkin tekstin väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Padding"
+msgstr "Kentän täyte"
+
+#: gutenberg-block/build/index.js:1
+msgid "Top & Bottom"
+msgstr "Yläosa & Alaosa"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Border"
+msgstr "Kentän reuna"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Border"
+msgstr "Näytä kentän reuna"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Style"
+msgstr "Reunan tyyli"
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Position"
+msgstr "Reunan sijainti"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Focus Outline"
+msgstr "Kentän fokuksen ääriviiva"
+
+#: gutenberg-block/build/index.js:1
+msgid "Override browser default input focus styles."
+msgstr "Ohita selaimen oletusfokuksen tyylit."
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Width"
+msgstr "Fokuksen ääriviivan leveys"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Offset"
+msgstr "Fokuksen ääriviivan siirtymä"
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Color"
+msgstr "Fokuksen ääriviivan väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Shadow"
+msgstr "Kentän varjo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Shadow"
+msgstr "Näytä kentän varjo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Position"
+msgstr "Varjon sijainti"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background"
+msgstr "Lähetyspainikkeen tausta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background Color"
+msgstr "Lähetyspainikkeen taustaväri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Remove Gradient Background"
+msgstr "Poista gradienttitausta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Gradient Background"
+msgstr "Lisää gradienttitausta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text"
+msgstr "Lähetyspainikkeen teksti"
+
+#: gutenberg-block/build/index.js:1
+msgid "Text transform"
+msgstr "Tekstin muunnos"
+
+#: gutenberg-block/build/index.js:1
+msgid "Thin (100)"
+msgstr "Ohut (100)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Heavy (900)"
+msgstr "Paksu (900)"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text Color"
+msgstr "Lähetyspainikkeen tekstin väri"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Width"
+msgstr "Lähetyspainikkeen leveys"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Padding"
+msgstr "Lähetyspainikkeen täyte"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Border"
+msgstr "Lähetyspainikkeen reuna"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Submit Border"
+msgstr "Näytä lähetyspainikkeen reuna"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Shadow"
+msgstr "Lähetyspainikkeen varjo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Box Shadow"
+msgstr "Näytä lähetyspainikkeen varjo"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Settings"
+msgstr "Lohkon asetukset"
+
+#: gutenberg-block/build/index.js:1
+msgid "Form Fields"
+msgstr "Lomakkeen kentät"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Button"
+msgstr "Lähetyspainike"
+
+#: gutenberg-block/build/index.js:1
+msgid "Your form can only be submitted in the front end"
+msgstr "Lomaketta voi lähettää vain etupuolelta"
+
+#: gutenberg-block/build/index.js:1
+msgid "Select a contact form"
+msgstr "Valitse yhteydenottolomake"
+
+#: gutenberg-block/build/index.js:1
+msgid "Toggle contact form selector"
+msgstr "Vaihda yhteydenottolomakkeen valitsinta"
+
+#: gutenberg-block/build/block.json
+msgctxt "block title"
+msgid "Style Contact Form 7"
+msgstr "Style Contact Form 7"
+
+#: gutenberg-block/build/block.json
+msgctxt "block description"
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr "Muotoile yhteydenottolomakkeesi helppoudella."

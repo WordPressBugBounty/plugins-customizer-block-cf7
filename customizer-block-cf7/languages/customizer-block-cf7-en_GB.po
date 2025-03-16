@@ -1,0 +1,497 @@
+# Copyright (C) 2024 Mofistudio
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Contact Form 7 1.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/customizer-block-"
+"cf7\n"
+"Last-Translator: \n"
+"Language-Team: English (UK)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-01T23:16:41+02:00\n"
+"PO-Revision-Date: 2024-10-02 01:12+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: customizer-block-cf7\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.11; wp-6.6.3-alpha-59007"
+
+#. Plugin Name of the plugin
+#: admin/cfcf7-admin.php:22 admin/cfcf7-admin.php:47
+msgid "Style Contact Form 7"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://stylecontactform7.com"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This Contact Form 7 compatible Gutenberg Block automates CSS style "
+"generation allowing you to quickly design visually appealing contact forms "
+"with minimal setup."
+msgstr ""
+"This Contact Form 7 compatible Gutenberg Block automates CSS style "
+"generation allowing you to quickly design visually appealing contact forms "
+"with minimal setup."
+
+#. Author of the plugin
+msgid "Mofistudio"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://mofistudio.com/"
+msgstr ""
+
+#: admin/cfcf7-admin.php:19
+msgid "Admin Banner"
+msgstr ""
+
+#: admin/cfcf7-admin.php:24
+msgid "Version 1.1.7"
+msgstr ""
+
+#: admin/cfcf7-admin.php:25
+msgid "Updates"
+msgstr ""
+
+#: admin/cfcf7-admin.php:29
+msgid "Style Contact Form 7 Icon"
+msgstr ""
+
+#: admin/cfcf7-admin.php:32
+msgid ""
+"This plugin integrates perfectly with Contact Form 7, making it simple to "
+"create beautiful contact forms with Gutenberg blocks."
+msgstr ""
+"This plugin integrates perfectly with Contact Form 7, making it simple to "
+"create beautiful contact forms with Gutenberg blocks."
+
+#: admin/cfcf7-admin.php:33
+msgid ""
+"You have the freedom to style multiple elements of the form. With user-"
+"friendly controls arranged in a logical sequence, you can easily insert the "
+"Style Contact Form 7 block and start customising."
+msgstr ""
+
+#: admin/cfcf7-admin.php:33
+msgid "To explore the features in more detail, refer to the"
+msgstr ""
+
+#: admin/cfcf7-admin.php:34 admin/cfcf7-admin.php:95
+msgid "Documentation"
+msgstr ""
+
+#: admin/cfcf7-admin.php:40
+msgid "AVAILABLE NOW!"
+msgstr ""
+
+#: admin/cfcf7-admin.php:48
+msgid "Pro"
+msgstr ""
+
+#: admin/cfcf7-admin.php:50 admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro Icon"
+msgstr ""
+
+#: admin/cfcf7-admin.php:55
+msgid "Would you like more options?"
+msgstr ""
+
+#: admin/cfcf7-admin.php:56
+msgid ""
+"This premium add-on offers a selection of animated loaders and form-submit "
+"blocks, giving you full control and elevating the contact form experience."
+msgstr ""
+
+#: admin/cfcf7-admin.php:60
+msgid "live demo"
+msgstr ""
+
+#: admin/cfcf7-admin.php:66
+msgid "Style Contact Form 7 Pro"
+msgstr ""
+
+#: admin/cfcf7-admin.php:69
+msgid "Early Bird - discount icon"
+msgstr ""
+
+#: admin/cfcf7-admin.php:73
+msgid "Early Bird discount price"
+msgstr ""
+
+#: admin/cfcf7-admin.php:74
+msgid "if purchased before 31st Oct 24."
+msgstr ""
+
+#: admin/cfcf7-admin.php:82
+msgid "Buy Now"
+msgstr ""
+
+#: admin/cfcf7-admin.php:98
+msgid "Get started in a few simple steps with the video demonstrations."
+msgstr ""
+
+#: admin/cfcf7-admin.php:105
+msgid "Get Support"
+msgstr ""
+
+#: admin/cfcf7-admin.php:108
+msgid "Questions answered, Problems solved!"
+msgstr ""
+
+#: admin/cfcf7-admin.php:116
+msgid "Leave Review"
+msgstr ""
+
+#: admin/cfcf7-admin.php:119
+msgid ""
+"If you find this plugin useful, please help it grow by leaving positive "
+"feedback!"
+msgstr ""
+
+#: admin/cfcf7-admin.php:137
+msgid "Credits"
+msgstr ""
+
+#: customizer-block-cf7.php:144
+msgid "Please add a contact form."
+msgstr ""
+
+#: customizer-block-cf7.php:145
+msgid "No form selected."
+msgstr ""
+
+#: includes/cfcf7-functions.php:44 includes/cfcf7-functions.php:45
+msgid "Style CF7"
+msgstr ""
+
+#: includes/cfcf7-functions.php:92
+msgid ""
+"Style Contact Form 7 - plugin requires Contact Form 7 in order to work, So "
+"please ensure that Contact Form 7 is installed and activated!"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Background"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Background Color"
+msgstr "Background Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width above 781px"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width between 361px and 780px"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "for screen width under 360px"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Sizing"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Base Font Size"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Scale everything by adjusting the base font size."
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Margin"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Top"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Left & Right"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Bottom"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Padding"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Border"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Radius"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Border Outline"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Width"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Color"
+msgstr "Border Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Shadow"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Block shadow"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Horizontal Offset"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Vertical Offset"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Blur"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Spread"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Color"
+msgstr "Shadow Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Background Color"
+msgstr "Field Background Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Labels"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Size"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Line Height"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Text Transform"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "None"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Uppercase"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Lowercase"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Capitalize"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Weight"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Light (300)"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Normal (400)"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Bold (700)"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Font Color"
+msgstr "Font Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Text Color"
+msgstr "Field Text Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Placeholder Text Color"
+msgstr "Placeholder Text Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Padding"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Top & Bottom"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Border"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Border"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Style"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Border Position"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Focus Outline"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Override browser default input focus styles."
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Width"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Offset"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Focus Outline Color"
+msgstr "Focus Outline Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Field Shadow"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Field Shadow"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Shadow Position"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Background Color"
+msgstr "Submit Background Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Remove Gradient Background"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Add Gradient Background"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Text transform"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Thin (100)"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Heavy (900)"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Text Color"
+msgstr "Submit Text Colour"
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Width"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Padding"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Border"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Submit Border"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Shadow"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Show Box Shadow"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Block Settings"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Form Fields"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Submit Button"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Your form can only be submitted in the front end"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Select a contact form"
+msgstr ""
+
+#: gutenberg-block/build/index.js:1
+msgid "Toggle contact form selector"
+msgstr ""
+
+#: gutenberg-block/build/block.json
+msgctxt "block title"
+msgid "Style Contact Form 7"
+msgstr ""
+
+#: gutenberg-block/build/block.json
+msgctxt "block description"
+msgid "Style your Contact Form 7 forms with Ease."
+msgstr ""
