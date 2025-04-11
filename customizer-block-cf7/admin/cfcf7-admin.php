@@ -21,8 +21,8 @@ if (!defined('ABSPATH')) {
         <h1 id="cfcf7-admin-title">
             <?php esc_html_e('Style Contact Form 7', 'customizer-block-cf7'); ?>
             <span id="cfcf7-version">
-                <?php esc_html_e('Version 1.2', 'customizer-block-cf7'); ?>
-                <a class="cfcf7-new-additions-link" href="https://stylecontactform7.com/blog/2024/11/14/1-2-updates/" target="_blank" rel="noopener noreferrer"><?php esc_attr_e('Updates', 'customizer-block-cf7'); ?></a>
+                <?php esc_html_e('Version 1.3', 'customizer-block-cf7'); ?>
+                <a class="cfcf7-new-additions-link" href="https://stylecontactform7.com/blog/2025/04/11/1-3-updates/" target="_blank" rel="noopener noreferrer"><?php esc_attr_e('Updates', 'customizer-block-cf7'); ?></a>
             </span>
         </h1>
 
@@ -34,70 +34,7 @@ if (!defined('ABSPATH')) {
             <a href="https://stylecontactform7.com/documentation" target="_blank"><?php esc_html_e('Documentation', 'customizer-block-cf7'); ?></a></p>
         </div>
 
-        <div id="cfcf7-pro-banner">
-                <div id="scf7-pro-announcement-rosette">
-                    <div>
-                       <h3><?php esc_html_e('AVAILABLE NOW!', 'customizer-block-cf7'); ?></h3>
-                   </div>
-                </div>
-
-              <div id="cfcf7-pro-banner-header">
-                <div>
-                    <h2 id="scf7-pro-title">
-                        <?php esc_html_e('Style Contact Form 7', 'customizer-block-cf7'); ?>
-                        <span class="highlight-pro"><?php esc_html_e('Pro', 'customizer-block-cf7'); ?></span>
-                    </h2>
-                        <img class="cfcf7-admin-pro-icon" src="<?php echo esc_url(CFCF7_PLUGIN_URL . '/admin/images/scf7-pro-icon.svg'); ?>" alt="<?php esc_attr_e('Style Contact Form 7 Pro Icon', 'customizer-block-cf7'); ?>">
-                </div>
-              </div>
-
-
-              <p><strong><?php esc_html_e('Would you like more options?', 'customizer-block-cf7'); ?></strong></p>
-              <p> <?php esc_html_e('This premium add-on offers a selection of animated loaders and form-submit blocks, giving you full control and elevating the contact form experience.', 'customizer-block-cf7'); ?></p>
-
-
-              <div id="scf7-pro-demo-video">
-               <iframe 
-                    width="700" 
-                    height="394" 
-                    src="https://www.youtube.com/embed/TsfHxHb0QFE?si=QR1yErNeSma5S6t5&vq=hd1080" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
-                <p><a class="" href="https://stylecontactform7.pro/demo/demo-legs/" target="_blank" rel="noopener noreferrer"><?php  esc_html_e('live demo', 'customizer-block-cf7'); ?></a></p>
-            </div>
-
-            
-                <div id="scf7-pro-price-box">
-                  <div>
-                     <h1><?php esc_html_e('Style Contact Form 7 Pro ', 'customizer-block-cf7'); ?>   <img class="cfcf7-admin-pro-icon-small" src="<?php echo esc_url(CFCF7_PLUGIN_URL . '/admin/images/scf7-pro-icon.svg'); ?>" alt="<?php esc_attr_e('Style Contact Form 7 Pro Icon', 'customizer-block-cf7'); ?>"></h1>
-
-                    <p class="cfcf7-price-container">
-                        <img  
-                            class="cfcf7-admin-earlybird-icon" 
-                            src="<?php echo esc_url(CFCF7_PLUGIN_URL . '/admin/images/scf7-bird-icon-animated.svg'); ?>" 
-                            alt="<?php esc_attr_e('Early Bird - discount icon', 'customizer-block-cf7'); ?>" 
-                            width="180" 
-                            height="180"
-                        />
-                    </p>
-                    <p>
-                        <?php esc_html_e('Early Bird discount price', 'customizer-block-cf7'); ?><br>
-                        <?php esc_html_e('if purchased before 30th Nov 24.', 'customizer-block-cf7'); ?>
-                        </p>
-                        <p>
-                        <span class="price-wrapper">
-                            <span class="original-price">$29</span> 
-                            <span class="discounted-price">$15</span>
-                        </span></p>
-                 
-                    <a class="scf7-pro-buy-now-button" href="https://stylecontactform7.pro/downloads/style-contact-form-7-pro/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Buy Now', 'customizer-block-cf7'); ?></a>
-              </div>
-            </div>  
-        </div>
+       
     </div><!-- end admin main -->
 
 

@@ -1,24 +1,23 @@
 === Style Contact Form 7 ===
 Contributors: mofistudio
-Tags: Contact Form 7, CF7, Contact Form 7 Style, Contact Form, Form CSS
+Tags: Contact Forms, Contact Form 7, Contact Form 7 Style, CF7
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 1.2
-Requires PHP: 7.2
+Tested up to: 6.8
+Stable tag: 1.3
+Requires PHP: 7.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This Contact Form 7 compatible Gutenberg Block automates CSS style generation allowing you to quickly design visually appealing contact forms.
 
-
 == Description ==
 
 This Contact Form 7 compatible Gutenberg Block automates CSS style generation allowing you to quickly design visually appealing contact forms with minimal setup.
-Style Contact Form 7 is not just a plugin; it's a game-changer for website owners, bloggers, and developers seeking to elevate their site's aesthetics and usability. Transform your contact forms from basic to breathtaking and experience a surge in user interaction and satisfaction!
+
 
 https://www.youtube.com/watch?v=CU86fjVT4w4
 
-=  Features - Style Contact Form 7 (Free Version)  =
+= Features =
 
 - Gutenberg Block Integration: Dive into the future of WordPress design with this plugin's Gutenberg block compatibility. Design and customize your Contact Form 7 forms directly in the Gutenberg editor, blending ease of use with sophisticated styling options.
 - Mobile and Tablet Friendly Design: In an era where mobile responsiveness is key, this plugin ensures your contact forms look impeccable on all devices. Enjoy peace of mind knowing your forms are automatically optimized for mobile and tablet users.
@@ -32,27 +31,6 @@ https://www.youtube.com/watch?v=CU86fjVT4w4
 - BLOCK Settings : Block Sizing, Block Margin, Block Padding, Block Background, Block Shadow.
 - FORM FIELDS : Field Background, Field Labels (Font Size, Line Height, Text transform, Font Weight, Font Color), Field Text (Font Size, Field Text Color, Placeholder Text Color), Field Padding, Field Border, Field Shadow.
 - SUBMIT SETTINGS : Submit Background (Solid color or Gradient), Submit Text (Font Size, Text transform, Font Weight, Submit Text Color), Submit Width, Submit Padding, Submit Border, Submit Shadow.
-
-
-
-
-
-https://www.youtube.com/watch?v=SGy7fVFADRQ
-
-
-
-= Features - Style Contact Form 7 Pro (Premium Version) =
-
-- Unlock a range of advanced features with this premium add-on, including animated loaders and form-submit blocks.
-
-- Animated Loaders Block — Personalize and choose from 9 distinct animated loaders to enhance form submission visuals.
-
-- Submit Blocks CF7 Block — Display customizable default content after a successful form submission, or swap it with your own blocks to create a truly unique user experience.
-
-[Live Demo](https://stylecontactform7.pro/demo/demo-legs/)
-
-Get [Style Contact Form 7 Pro](https://stylecontactform7.pro/downloads/style-contact-form-7-pro/) now for the promotional price of $15.
-
 
 
 = Docs and support =
@@ -79,10 +57,6 @@ Feel free to contact [Support](https://stylecontactform7.com/support/) if it is 
 
 Yes, click here for [Support](https://stylecontactform7.com/support/)
 
-= What's next for this project? =
-
-Launching Style Contact Form 7 Pro.
-Making it rtl accessible.
 
 == Screenshots ==
 
@@ -93,6 +67,11 @@ Making it rtl accessible.
 5. Adjust block shadow
 
 == Changelog ==
+
+= 1.3 =
+* Tested with WP 6.8
+* Updated documentation
+
 
 = 1.2 =
 * Added new pro demo video.
