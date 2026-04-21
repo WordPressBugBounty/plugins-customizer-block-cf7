@@ -3,12 +3,14 @@
  * Plugin Name:       Style Contact Form 7
  * Plugin URI:        https://stylecontactform7.com
  * Description:       This Contact Form 7 compatible Gutenberg Block automates CSS style generation allowing you to quickly design visually appealing contact forms with minimal setup.
- * Version:           1.3
+ * Version:           1.4
+ * Requires at least: 6.0
+ * Requires PHP:      7.4
  * Requires Plugins:  contact-form-7
  * Author:            Mofistudio
  * Author URI:        https://mofistudio.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       customizer-block-cf7
  * Domain Path:       /languages
  *
@@ -17,163 +19,231 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
+// Define plugin constants.
+define( 'CFCF7_VERSION', '1.4' );
+define( 'CFCF7_PLUGIN', __FILE__ );
+define( 'CFCF7_PLUGIN_DIR', untrailingslashit( dirname( CFCF7_PLUGIN ) ) );
+define( 'CFCF7_PLUGIN_URL', untrailingslashit( plugins_url( '', CFCF7_PLUGIN ) ) );
+define( 'CFCF7_PLUGIN_BASENAME', plugin_basename( CFCF7_PLUGIN ) );
 
- // define some constants.
- define( 'CFCF7_VERSION', '1.3' );
-
- define( 'CFCF7_PLUGIN', __FILE__ );
-
- define( 'CFCF7_PLUGIN_DIR', untrailingslashit( dirname( CFCF7_PLUGIN ) ) );
-
- define( 'CFCF7_PLUGIN_URL', untrailingslashit( plugins_url( '', CFCF7_PLUGIN ) ) );
-
- define( 'CFCF7_PLUGIN_BASENAME', plugin_basename( CFCF7_PLUGIN ) );
- 
-
-
-// include plugin functions.
+// Include plugin functions.
 include CFCF7_PLUGIN_DIR . '/includes/cfcf7-functions.php';
 
+// Redirect to Customizer Block CF7 admin page once after first activation.
+register_activation_hook( __FILE__, 'cfcf7_activate' );
+add_action( 'admin_init', 'cfcf7_redirect' );
+add_action( 'init', 'cfcf7_load_textdomain' );
+add_action( 'init', 'cfcf7__block_init' );
 
-// Redirect to Customizer Block CF7 Admin Page on plugin activation.
+/**
+ * Set one-time redirect flag on first activation only.
+ *
+ * @param bool $network_wide Whether the plugin is being activated network-wide.
+ * @return void
+ */
+function cfcf7_activate( $network_wide ) {
+	// Do not redirect after network activation.
+	if ( is_multisite() && $network_wide ) {
+		return;
+	}
 
- register_activation_hook(__FILE__, 'cfcf7_activate');
+	// Only set the redirect the first time the plugin is ever activated.
+	if ( false === get_option( 'cfcf7_welcome_redirect_done', false ) ) {
+		add_option( 'cfcf7_do_activation_redirect', 1 );
+	}
+}
 
- add_action('admin_init', 'cfcf7_redirect');
- 
- function cfcf7_activate() {
+/**
+ * Redirect to plugin admin page after first activation.
+ *
+ * @return void
+ */
+function cfcf7_redirect() {
+	if ( ! is_admin() ) {
+		return;
+	}
 
-	 add_option('cfcf7_do_activation_redirect', true);
- }
- 
- function cfcf7_redirect() {
- 
-	 if ( get_option('cfcf7_do_activation_redirect', false ) ) {
- 
-		delete_option('cfcf7_do_activation_redirect');
+	// Never redirect inside network admin.
+	if ( is_network_admin() ) {
+		return;
+	}
 
-		$redirect_url = admin_url( 'admin.php?page=cfcf7_admin_page' );
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Reading activate-multi only to avoid redirecting during bulk activation; no user action is being processed here.
+	$activate_multi = isset( $_GET['activate-multi'] ) ? sanitize_text_field( wp_unslash( $_GET['activate-multi'] ) ) : '';
 
-			wp_safe_redirect(
+	// Do not interrupt bulk activation flows.
+	if ( '' !== $activate_multi ) {
+		return;
+	}
 
-				esc_url( $redirect_url )
-			);
+	if ( ! get_option( 'cfcf7_do_activation_redirect', false ) ) {
+		return;
+	}
 
-		exit;
+	delete_option( 'cfcf7_do_activation_redirect' );
+	update_option( 'cfcf7_welcome_redirect_done', 1 );
 
-	 }
- }
- 
+	wp_safe_redirect( admin_url( 'admin.php?page=cfcf7_admin_page' ) );
+	exit;
+}
 
-// Gutenberg block
+/**
+ * Load bundled translations as a fallback.
+ *
+ * WordPress.org language packs are loaded automatically first.
+ * This loads plugin /languages files when no external translation exists.
+ *
+ * @return void
+ */
+function cfcf7_load_textdomain() {
+	/**
+	 * Load bundled translations as fallback.
+	 *
+	 * Note: WordPress.org translations are loaded automatically,
+	 * but this is required to ensure plugin /languages/ files load
+	 * when no external translation exists (tested on multisite).
+	 */
+	load_plugin_textdomain(
+		'customizer-block-cf7',
+		false,
+		dirname( plugin_basename( __FILE__ ) ) . '/languages'
+	);
+}
+
+// Gutenberg block.
 function cfcf7__block_init() {
 
-    //---- Register the block using metadata from block.json.
-    register_block_type(__DIR__ . '/gutenberg-block/build', array(
-        'render_callback' => 'cfcf7_render_callback',
-    ));
-
-	//---- Load translations files for PHP
-	load_plugin_textdomain( 'customizer-block-cf7', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	// Register the block using metadata from block.json.
+	register_block_type(
+		__DIR__ . '/gutenberg-block/build',
+		array(
+			'render_callback' => 'cfcf7_render_callback',
+		)
+	);
 
 	$script_handle = generate_block_asset_handle( 'mofistudio/customizer-block-cf7', 'editorScript' );
-	
 
-	//---- Load translations files for Javascript
-	wp_set_script_translations( $script_handle, 'customizer-block-cf7', plugin_dir_path( __FILE__ ) . 'languages' );
-
+	// Load translation files for JavaScript.
+	wp_set_script_translations(
+		$script_handle,
+		'customizer-block-cf7',
+		plugin_dir_path( __FILE__ ) . 'languages'
+	);
 
 	$args = array(
 		'post_type'      => 'wpcf7_contact_form',
-		'posts_per_page' => 20,
+		'posts_per_page' => 50,
 		'post_status'    => 'publish',
 		'orderby'        => 'modified',
 		'order'          => 'DESC',
 	);
-	
-	// Get posts directly
-	$contact_forms_posts = get_posts($args);
-	
-	$contact_forms = [];
 
-		foreach ($contact_forms_posts as $post) {
-			$contact_ID = $post->ID;
+	$contact_forms_posts = get_posts( $args );
+	$contact_forms       = array();
 
-			// Escape the output
-			$contact_forms[] = [
-				'id' => esc_attr($contact_ID), // Escaping attribute
-				'title' => esc_html($post->post_title), // Escaping HTML output
-				'modified' => esc_html($post->post_modified), // Escaping HTML output
-			];
-		}
+	foreach ( $contact_forms_posts as $post ) {
+		$contact_id = $post->ID;
 
-		
+		$contact_forms[] = array(
+			'id'       => absint( $contact_id ),
+			'title'    => esc_html( $post->post_title ),
+			'modified' => esc_html( $post->post_modified ),
+		);
+	}
+
 	wp_add_inline_script(
-		'wp-blocks',
+		$script_handle,
 		sprintf(
-			'window.cfcf7 = { contactForms: %s };',
-			wp_json_encode($contact_forms)
+			'globalThis.cfcf7 = { contactForms: %s };',
+			wp_json_encode( $contact_forms )
 		),
 		'before'
 	);
-	
-
 }
-add_action('init', 'cfcf7__block_init');
 
-
-//-- Block Callback
+// Block callback.
 function cfcf7_render_callback( $atts, $content, $block ) {
 
-    // Start output buffering
-    ob_start();
-	
-    // No contact form selected or empty case
-    if (!isset($atts['contact_form']) || $atts['contact_form'] === 'unselected' || $atts['contact_form'] === 'empty') {
-		$message = (isset($atts['contact_form']) && $atts['contact_form'] === 'empty') ?
-			__('Please add a contact form.', 'customizer-block-cf7') :
-			__('No form selected.', 'customizer-block-cf7');
-	
-		// Escape the message before output
-		echo '<div class="no-form-message">' . esc_html($message) . '</div>';
-		return ob_get_clean(); // Get buffered output and return it
+	$contact_form = isset( $atts['contact_form'] ) ? (string) $atts['contact_form'] : '';
+
+	if ( '' === $contact_form || 'unselected' === $contact_form ) {
+		return '<div class="cfcf7-block-container"><div class="cfcf7-block cfcf7-placeholder-message">' . esc_html__( 'No form selected.', 'customizer-block-cf7' ) . '</div></div>';
 	}
-	
 
-    // Include block container style settings
-    include CFCF7_PLUGIN_DIR . '/gutenberg-block/block-settings.php';
+	if ( 'empty' === $contact_form ) {
+		return '<div class="cfcf7-block-container"><div class="cfcf7-block cfcf7-placeholder-message">' . esc_html__( 'Please add a contact form.', 'customizer-block-cf7' ) . '</div></div>';
+	}
 
-    // Include styles related to form fields and submit button
-    include CFCF7_PLUGIN_DIR . '/gutenberg-block/field-settings.php';
-    include CFCF7_PLUGIN_DIR . '/gutenberg-block/submit-settings.php';
+	$form_id = absint( $contact_form );
 
-    // Merge setting arrays and generate styles
-    $style_settings_array = array_merge($field_settings_array, $submit_settings_array);
-	$settings_string = implode(" ", $style_settings_array);
+	// Bail with a friendly placeholder if the value is not a valid numeric CF7 form ID.
+	if ( ! $form_id ) {
+		return '<div class="cfcf7-block-container"><div class="cfcf7-block cfcf7-placeholder-message">' . esc_html__( 'No form selected.', 'customizer-block-cf7' ) . '</div></div>';
+	}
 
-    // Add class and styles to block container
-    $wrapper_attributes = get_block_wrapper_attributes([
-        'class' => 'cfcf7-block',
-        'style' => $styles,
-    ]);
+	// Bail with a friendly placeholder if the form post no longer exists.
+	if ( ! get_post( $form_id ) ) {
+		return '<div class="cfcf7-block-container"><div class="cfcf7-block cfcf7-placeholder-message">' . esc_html__( 'Please add a contact form.', 'customizer-block-cf7' ) . '</div></div>';
+	}
 
-    // Process the contact form if selected
-    if (!empty($atts['contact_form'])) {
-        $form_ID = 'id="' . $atts['contact_form'] . '"';
-        $shortcode_string = sprintf('[contact-form-7 %s]', $form_ID);
+	ob_start();
 
-        // Start final output string
-		echo '<style>' . wp_kses_post($settings_string) . '</style>';
-        echo '<div class="cfcf7-block-container">';
-		echo '<div ' . wp_kses_post( $wrapper_attributes ) . '>';
-        echo do_shortcode($shortcode_string);
-        echo '</div></div>';
+	$instance_class = 'cfcf7-instance-' . wp_unique_id();
+	$block_scope    = '.' . $instance_class;
 
-        return ob_get_clean(); // Get the buffered output and return it
-    }
+	// More reliable editor preview detection for block renderer requests.
+	$request_context   = filter_input( INPUT_GET, 'context', FILTER_SANITIZE_SPECIAL_CHARS );
+	$is_editor_preview = (
+		defined( 'REST_REQUEST' ) &&
+		REST_REQUEST &&
+		'edit' === $request_context
+	);
 
-    return ob_get_clean(); // Return buffered content even if nothing matches
+	include CFCF7_PLUGIN_DIR . '/gutenberg-block/block-settings.php';
+	include CFCF7_PLUGIN_DIR . '/gutenberg-block/field-settings.php';
+	include CFCF7_PLUGIN_DIR . '/gutenberg-block/submit-settings.php';
+
+	$style_settings_array = array_merge(
+		$cfcf7_block_settings_array ?? array(),
+		$cfcf7_field_settings_array ?? array(),
+		$cfcf7_submit_settings_array ?? array()
+	);
+
+	$settings_string = trim( implode( ' ', $style_settings_array ) );
+
+	$wrapper_args = array(
+		'class' => 'cfcf7-block ' . $instance_class,
+	);
+
+	if ( ! $is_editor_preview ) {
+		$wrapper_args['style'] = $cfcf7_block_styles ?? '';
+	}
+
+	$wrapper_attributes = get_block_wrapper_attributes( $wrapper_args );
+	$shortcode_string   = sprintf( '[contact-form-7 id="%d"]', $form_id );
+
+	echo '<div class="cfcf7-block-container">';
+
+	// Editor preview relies on editor styles plus generated scoped CSS from PHP.
+	if ( is_admin() && ! empty( $settings_string ) ) {
+		echo wp_kses(
+			'<style>' . $settings_string . '</style>',
+			array(
+				'style' => array(),
+			)
+		);
+	}
+
+	if ( ! is_admin() && ! empty( $settings_string ) ) {
+		wp_add_inline_style( 'mofistudio-customizer-block-cf7-style', $settings_string );
+	}
+
+	echo '<div ' . wp_kses_post( $wrapper_attributes ) . '>';
+	echo do_shortcode( $shortcode_string );
+	echo '</div></div>';
+
+	return ob_get_clean();
 }

@@ -5,405 +5,368 @@
  * @package Customizer_Block_CF7
  */
 
- if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
- }
- 
-
- // Initialize field Settings Array
- $submit_settings_array = array();
-
-/**
- * Submit Background Color
- *
- */
-
-if (!empty($atts['show_gradient_picker']) && $atts['show_gradient_picker'] === true && !empty($atts['submit_bg_gradient'])) {
-    $submit_bg_gradient = $atts['submit_bg_gradient'];
-    $submitBgGradientString = ".wpcf7-submit, .wpcf7-submit-wrapper{ background: $submit_bg_gradient!important; }";
-    $submit_settings_array[] = $submitBgGradientString;
-} elseif (!empty($atts['submit_bg_color'])) {
-    // Apply solid color if gradient is not selected or no gradient value is provided
-    $submit_bg_color = $atts['submit_bg_color'];
-    $submitBgColorString = ".wpcf7-submit, .wpcf7-submit-wrapper{ background: $submit_bg_color!important; line-height:1.5em!important;}";
-    $submit_settings_array[] = $submitBgColorString;
-}
-
-
-/**
- * Submit Font Size
- *
- */
-
-    if (!empty($atts["submit_font_size"])) {
-        $submitText =
-            "font-size:" .
-            $atts["submit_font_size"] .
-            "em" .
-            "!important; ";
-        $submit_settings_array[] =
-            ".cfcf7-block .wpcf7-submit{" . $submitText . "} ";
-    }
-
-
-/**
- * Submit Font Case
- *
- */
-if (!empty($atts["submit_font_case"])) {
-    $submit_font_case = $atts["submit_font_case"];
-    $submitCaseString = ".cfcf7-block .wpcf7-submit{ text-transform: $submit_font_case!important; }";
-    $submit_settings_array[] = $submitCaseString;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
 }
 
 /**
- * Submit Font Weight
- *
+ * Normalize submit width values.
  */
+if ( ! function_exists( 'cfcf7_normalize_submit_width' ) ) {
+	/**
+	 * Normalize submit width values.
+	 *
+	 * @param mixed  $value    Raw width value.
+	 * @param string $fallback Fallback width.
+	 * @return string
+	 */
+	function cfcf7_normalize_submit_width( $value, $fallback = 'auto' ) {
+		if ( '' === $value || null === $value ) {
+			return $fallback;
+		}
 
-if (isset($atts["submit_font_weight"])) {
-    $submit_settings_array[] =
-    ".cfcf7-block .wpcf7-submit{ font-weight:" .
-        $atts["submit_font_weight"] .
-        "!important;} ";
-}
+		$value = (string) $value;
 
+		if ( '100' === $value || '100%' === $value ) {
+			return '100%';
+		}
 
-/**
- * Submit Text Color
- *
- */
-if (!empty($atts["submit_text_color"])) {
-    $submitText = "color: " . $atts["submit_text_color"] . "!important;";
-    $submit_settings_array[] = ".cfcf7-block .wpcf7-submit{" . $submitText . "} ";
-}
+		if ( '50' === $value || 'auto' === $value ) {
+			return 'auto';
+		}
 
-
-/**
- * Submit Padding
- *
- */
-
-    if (!empty($atts["submit_padding_top_bottom"])) {
-        $submit_padding_top_bottom =
-            "padding-top:" .
-            $atts["submit_padding_top_bottom"] .
-            "em" .
-            "!important; ";
-        $submit_padding_top_bottom .=
-            "padding-bottom:" .
-            $atts["submit_padding_top_bottom"] .
-            "em" .
-            "!important; ";
-        $submit_settings_array[] =
-            ".cfcf7-block .wpcf7-submit{" .
-            $submit_padding_top_bottom .
-            "} ";
-    }
-
-    if (isset($atts["submit_padding_left_right"])) {
-        $submit_padding_left_right =
-            "padding-left:" .
-            $atts["submit_padding_left_right"] .
-            "em" .
-            "; ";
-        $submit_padding_left_right .=
-            "padding-right:" .
-            $atts["submit_padding_left_right"] .
-            "em" .
-            " ; ";
-        $submit_settings_array[] =
-            ".cfcf7-block .wpcf7-submit{" .
-            $submit_padding_left_right .
-            "} ";
-    }
-
-
-/**
- * Submit Width
- *
- */
-if (!empty($atts["submit_width"])) {
-    if ($atts["submit_width"] === "100") {
-        $submit_width = $atts["submit_width"] . "%";
-        $submitWidthString = ".cfcf7-block
- .wpcf7-submit{ width: $submit_width; }";
-        $submit_settings_array[] = $submitWidthString;
-    } elseif ($atts["submit_width"] === "50") {
-        $submitWidthString =
-            ".cfcf7-block .wpcf7-submit{ width: auto; }";
-        $submit_settings_array[] = $submitWidthString;
-    }
+		return $fallback;
+	}
 }
 
 /**
- * Submit Border Radius
- *
+ * Map submit width to container width.
+ * Button uses auto/100%.
+ * Parent <p> uses fit-content/100%.
  */
+if ( ! function_exists( 'cfcf7_get_submit_container_width' ) ) {
+	/**
+	 * Convert button width to container width.
+	 *
+	 * @param mixed  $value    Raw width value.
+	 * @param string $fallback Fallback width.
+	 * @return string
+	 */
+	function cfcf7_get_submit_container_width( $value, $fallback = 'fit-content' ) {
+		$cfcf7_normalized = cfcf7_normalize_submit_width( $value, 'auto' );
 
-$submitFieldString = ".cfcf7-block .wpcf7-submit";
+		if ( '100%' === $cfcf7_normalized ) {
+			return '100%';
+		}
 
-if (empty($atts["submit_border_radius"])) {
-    $submit_border_radius = "0";
-    $submitBorderRadiusString = "$submitFieldString{ border-radius: $submit_border_radius!important;}";
-    $submit_settings_array[] = $submitBorderRadiusString;
+		if ( 'auto' === $cfcf7_normalized ) {
+			return 'fit-content';
+		}
+
+		return $fallback;
+	}
 }
 
-if (!empty($atts["submit_border_radius"])) {
-    $submit_border_radius = $atts["submit_border_radius"] . "em";
-    $submitBorderRadiusString = "$submitFieldString{ border-radius: $submit_border_radius!important;}";
-    $submit_settings_array[] = $submitBorderRadiusString;
+if ( ! function_exists( 'cfcf7_build_submit_settings_array' ) ) {
+	/**
+	 * Build submit CSS rules for the rendered form block.
+	 *
+	 * @param array  $cfcf7_atts        Block attributes.
+	 * @param string $cfcf7_block_scope Block scope selector.
+	 * @return array
+	 */
+	function cfcf7_build_submit_settings_array( $cfcf7_atts, $cfcf7_block_scope ) {
+		$cfcf7_submit_settings_array = array();
+
+		// Safety: render callback should provide $cfcf7_block_scope like ".cfcf7-instance-xxxx".
+		if ( empty( $cfcf7_block_scope ) ) {
+			$cfcf7_block_scope = '.cfcf7-block';
+		}
+
+		$cfcf7_submit_field_string     = $cfcf7_block_scope . ' .wpcf7-submit';
+		$cfcf7_submit_wrapper_string   = $cfcf7_block_scope . ' .wpcf7-submit-wrapper';
+		$cfcf7_submit_container_string = $cfcf7_block_scope . ' .wpcf7 form p:has(.wpcf7-submit)';
+		$cfcf7_submit_bg_targets       = $cfcf7_submit_field_string . ', ' . $cfcf7_submit_wrapper_string;
+
+		/**
+		 * Build CSS variable declarations on the block wrapper.
+		 */
+		$cfcf7_submit_vars = array();
+
+		/**
+		 * Submit background / gradient.
+		 * block.json defaults:
+		 * - submit_bg_color: #403b40
+		 * - show_gradient_picker: false
+		 * - submit_bg_gradient: linear-gradient(...)
+		 */
+		$cfcf7_submit_bg_value = isset( $cfcf7_atts['submit_bg_color'] ) && '' !== $cfcf7_atts['submit_bg_color']
+			? $cfcf7_atts['submit_bg_color']
+			: '#403b40';
+
+		if (
+			! empty( $cfcf7_atts['show_gradient_picker'] ) &&
+			true === $cfcf7_atts['show_gradient_picker'] &&
+			! empty( $cfcf7_atts['submit_bg_gradient'] )
+		) {
+			$cfcf7_submit_bg_value = $cfcf7_atts['submit_bg_gradient'];
+		}
+
+		$cfcf7_submit_vars[] = '--cfcf7-submit-bg:' . esc_attr( $cfcf7_submit_bg_value );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-line-height:1.5em';
+
+		/**
+		 * Typography.
+		 * block.json defaults:
+		 * - submit_font_size: 1
+		 * - submit_font_case: capitalize
+		 * - submit_font_weight: 400
+		 * - submit_text_color: white
+		 */
+		$cfcf7_submit_vars[] = '--cfcf7-submit-font-size:' . ( isset( $cfcf7_atts['submit_font_size'] ) ? floatval( $cfcf7_atts['submit_font_size'] ) . 'em' : '1em' );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-font-case:' . ( ! empty( $cfcf7_atts['submit_font_case'] ) ? esc_attr( $cfcf7_atts['submit_font_case'] ) : 'capitalize' );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-font-weight:' . ( isset( $cfcf7_atts['submit_font_weight'] ) ? esc_attr( $cfcf7_atts['submit_font_weight'] ) : '400' );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-text:' . ( ! empty( $cfcf7_atts['submit_text_color'] ) ? esc_attr( $cfcf7_atts['submit_text_color'] ) : 'white' );
+
+		/**
+		 * Padding.
+		 * block.json defaults:
+		 * - submit_padding_top_bottom: 0.9
+		 * - submit_padding_left_right: 4
+		 */
+		$cfcf7_submit_padding_y = isset( $cfcf7_atts['submit_padding_top_bottom'] ) ? floatval( $cfcf7_atts['submit_padding_top_bottom'] ) . 'em' : '0.9em';
+		$cfcf7_submit_padding_x = isset( $cfcf7_atts['submit_padding_left_right'] ) ? floatval( $cfcf7_atts['submit_padding_left_right'] ) . 'em' : '4em';
+
+		$cfcf7_submit_vars[] = '--cfcf7-submit-padding-y:' . $cfcf7_submit_padding_y;
+		$cfcf7_submit_vars[] = '--cfcf7-submit-padding-x:' . $cfcf7_submit_padding_x;
+
+		/**
+		 * Width.
+		 * block.json defaults:
+		 * - submit_width: auto
+		 */
+		$cfcf7_submit_width = cfcf7_normalize_submit_width(
+			isset( $cfcf7_atts['submit_width'] ) ? $cfcf7_atts['submit_width'] : '',
+			'auto'
+		);
+
+		$cfcf7_submit_container_width = cfcf7_get_submit_container_width(
+			isset( $cfcf7_atts['submit_width'] ) ? $cfcf7_atts['submit_width'] : '',
+			'fit-content'
+		);
+
+		$cfcf7_submit_vars[] = '--cfcf7-submit-width:' . $cfcf7_submit_width;
+		$cfcf7_submit_vars[] = '--cfcf7-submit-container-width:' . $cfcf7_submit_container_width;
+
+		/**
+		 * Border radius.
+		 * block.json default:
+		 * - submit_border_radius: 0.5
+		 */
+		$cfcf7_submit_vars[] = '--cfcf7-submit-radius:' . (
+			isset( $cfcf7_atts['submit_border_radius'] ) && '' !== $cfcf7_atts['submit_border_radius']
+				? floatval( $cfcf7_atts['submit_border_radius'] ) . 'em'
+				: '0.5em'
+		);
+
+		/**
+		 * Border.
+		 * block.json defaults:
+		 * - show_submit_border: false
+		 * - submit_border_width: 1
+		 * - submit_border_color: red
+		 */
+		$cfcf7_submit_border_enabled = ! empty( $cfcf7_atts['show_submit_border'] ) && false !== $cfcf7_atts['show_submit_border'];
+
+		$cfcf7_submit_vars[] = '--cfcf7-submit-border-width:' . ( isset( $cfcf7_atts['submit_border_width'] ) ? floatval( $cfcf7_atts['submit_border_width'] ) . 'px' : '1px' );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-border-color:' . ( ! empty( $cfcf7_atts['submit_border_color'] ) ? esc_attr( $cfcf7_atts['submit_border_color'] ) : 'red' );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-border-style:' . ( $cfcf7_submit_border_enabled ? 'solid' : 'none' );
+
+		/**
+		 * Shadow.
+		 * block.json defaults:
+		 * - show_submit_shadow: true
+		 * - submit_h_offset: 0
+		 * - submit_v_offset: 0.3
+		 * - submit_blur: 1
+		 * - submit_spread: -0.6
+		 * - submit_shadow_color: grey
+		 */
+		$cfcf7_submit_shadow_enabled = isset( $cfcf7_atts['show_submit_shadow'] ) ? ( false !== $cfcf7_atts['show_submit_shadow'] ) : true;
+
+		$cfcf7_submit_h_offset     = isset( $cfcf7_atts['submit_h_offset'] ) ? floatval( $cfcf7_atts['submit_h_offset'] ) : 0;
+		$cfcf7_submit_v_offset     = isset( $cfcf7_atts['submit_v_offset'] ) ? floatval( $cfcf7_atts['submit_v_offset'] ) : 0.3;
+		$cfcf7_submit_blur         = isset( $cfcf7_atts['submit_blur'] ) ? floatval( $cfcf7_atts['submit_blur'] ) : 1;
+		$cfcf7_submit_spread       = isset( $cfcf7_atts['submit_spread'] ) ? floatval( $cfcf7_atts['submit_spread'] ) : -0.6;
+		$cfcf7_submit_shadow_color = ! empty( $cfcf7_atts['submit_shadow_color'] ) ? esc_attr( $cfcf7_atts['submit_shadow_color'] ) : 'grey';
+
+		$cfcf7_submit_box_shadow =
+			$cfcf7_submit_h_offset . 'em ' .
+			$cfcf7_submit_v_offset . 'em ' .
+			$cfcf7_submit_blur . 'em ' .
+			$cfcf7_submit_spread . 'em ' .
+			$cfcf7_submit_shadow_color;
+
+		$cfcf7_submit_vars[] = '--cfcf7-submit-shadow:' . ( $cfcf7_submit_shadow_enabled ? $cfcf7_submit_box_shadow : 'none' );
+		$cfcf7_submit_vars[] = '--cfcf7-submit-hover-shadow:none';
+
+		/**
+		 * Apply all variables to the block wrapper scope.
+		 */
+		$cfcf7_submit_settings_array[] = $cfcf7_block_scope . ' { ' . implode( '; ', $cfcf7_submit_vars ) . '; }';
+
+		/**
+		 * Base submit rules.
+		 */
+		$cfcf7_submit_settings_array[] = $cfcf7_submit_bg_targets . ' {
+			background: var(--cfcf7-submit-bg) !important;
+		}';
+
+		$cfcf7_submit_settings_array[] = $cfcf7_submit_container_string . ' {
+			position: relative;
+			width: var(--cfcf7-submit-container-width) !important;
+			max-width: 100%;
+		}';
+
+		$cfcf7_submit_settings_array[] = $cfcf7_submit_field_string . ' {
+			font-size: var(--cfcf7-submit-font-size) !important;
+			text-transform: var(--cfcf7-submit-font-case) !important;
+			font-weight: var(--cfcf7-submit-font-weight) !important;
+			color: var(--cfcf7-submit-text) !important;
+			padding-top: var(--cfcf7-submit-padding-y) !important;
+			padding-bottom: var(--cfcf7-submit-padding-y) !important;
+			padding-left: var(--cfcf7-submit-padding-x);
+			padding-right: var(--cfcf7-submit-padding-x);
+			width: var(--cfcf7-submit-width) !important;
+			border-radius: var(--cfcf7-submit-radius) !important;
+			border-width: var(--cfcf7-submit-border-width);
+			border-color: var(--cfcf7-submit-border-color);
+			border-style: var(--cfcf7-submit-border-style);
+			box-shadow: var(--cfcf7-submit-shadow);
+			line-height: var(--cfcf7-submit-line-height) !important;
+			position: relative;
+		}';
+
+		/**
+		 * Hover.
+		 */
+		$cfcf7_submit_settings_array[] = $cfcf7_submit_field_string . ':hover {
+			box-shadow: var(--cfcf7-submit-hover-shadow) !important;
+		}';
+
+		/**
+		 * Responsive styles for Tablet screens.
+		 * block.json defaults:
+		 * - base_font_size_tablet: 16
+		 * - margin_top_tablet: 0
+		 * - margin_sides_tablet: 0
+		 * - margin_bottom_tablet: 0
+		 * - padding_top_tablet: 1.6
+		 * - padding_sides_tablet: 2.2
+		 * - padding_bottom_tablet: 1.6
+		 * - submit_width_tablet: auto
+		 */
+		$cfcf7_base_font_size_tablet = isset( $cfcf7_atts['base_font_size_tablet'] ) ? $cfcf7_atts['base_font_size_tablet'] : '16';
+
+		$cfcf7_margin_top_tablet    = isset( $cfcf7_atts['margin_top_tablet'] ) ? $cfcf7_atts['margin_top_tablet'] : '0';
+		$cfcf7_margin_sides_tablet  = isset( $cfcf7_atts['margin_sides_tablet'] ) ? $cfcf7_atts['margin_sides_tablet'] : '0';
+		$cfcf7_margin_bottom_tablet = isset( $cfcf7_atts['margin_bottom_tablet'] ) ? $cfcf7_atts['margin_bottom_tablet'] : '0';
+
+		$cfcf7_padding_top_tablet    = isset( $cfcf7_atts['padding_top_tablet'] ) ? $cfcf7_atts['padding_top_tablet'] : '1.6';
+		$cfcf7_padding_sides_tablet  = isset( $cfcf7_atts['padding_sides_tablet'] ) ? $cfcf7_atts['padding_sides_tablet'] : '2.2';
+		$cfcf7_padding_bottom_tablet = isset( $cfcf7_atts['padding_bottom_tablet'] ) ? $cfcf7_atts['padding_bottom_tablet'] : '1.6';
+
+		$cfcf7_submit_width_tablet = cfcf7_normalize_submit_width(
+			isset( $cfcf7_atts['submit_width_tablet'] ) ? $cfcf7_atts['submit_width_tablet'] : '',
+			'auto'
+		);
+
+		$cfcf7_submit_container_width_tablet = cfcf7_get_submit_container_width(
+			isset( $cfcf7_atts['submit_width_tablet'] ) ? $cfcf7_atts['submit_width_tablet'] : '',
+			'fit-content'
+		);
+
+		$cfcf7_submit_settings_array[] = "
+@media only screen and (min-width: 481px) and (max-width: 782px) {
+	{$cfcf7_block_scope} {
+		font-size: {$cfcf7_base_font_size_tablet}px !important;
+		margin-top: {$cfcf7_margin_top_tablet}em !important;
+		margin-left: {$cfcf7_margin_sides_tablet}em !important;
+		margin-right: {$cfcf7_margin_sides_tablet}em !important;
+		margin-bottom: {$cfcf7_margin_bottom_tablet}em !important;
+		padding-top: {$cfcf7_padding_top_tablet}em !important;
+		padding-left: {$cfcf7_padding_sides_tablet}em !important;
+		padding-right: {$cfcf7_padding_sides_tablet}em !important;
+		padding-bottom: {$cfcf7_padding_bottom_tablet}em !important;
+	}
+	{$cfcf7_submit_container_string} {
+		width: {$cfcf7_submit_container_width_tablet} !important;
+		max-width: 100%;
+	}
+	{$cfcf7_submit_field_string} {
+		width: {$cfcf7_submit_width_tablet} !important;
+	}
+}";
+
+		/**
+		 * Responsive styles for Mobile screens.
+		 * block.json defaults:
+		 * - base_font_size_mobile: 16
+		 * - margin_top_mobile: 1
+		 * - margin_sides_mobile: -0.5
+		 * - margin_bottom_mobile: 1
+		 * - padding_top_mobile: 2
+		 * - padding_sides_mobile: 1.5
+		 * - padding_bottom_mobile: 2
+		 * - submit_width_mobile: 100
+		 */
+		$cfcf7_base_font_size_mobile = isset( $cfcf7_atts['base_font_size_mobile'] ) ? $cfcf7_atts['base_font_size_mobile'] : '16';
+
+		$cfcf7_margin_top_mobile    = isset( $cfcf7_atts['margin_top_mobile'] ) ? $cfcf7_atts['margin_top_mobile'] : '1';
+		$cfcf7_margin_sides_mobile  = isset( $cfcf7_atts['margin_sides_mobile'] ) ? $cfcf7_atts['margin_sides_mobile'] : '-0.5';
+		$cfcf7_margin_bottom_mobile = isset( $cfcf7_atts['margin_bottom_mobile'] ) ? $cfcf7_atts['margin_bottom_mobile'] : '1';
+
+		$cfcf7_padding_top_mobile    = isset( $cfcf7_atts['padding_top_mobile'] ) ? $cfcf7_atts['padding_top_mobile'] : '2';
+		$cfcf7_padding_sides_mobile  = isset( $cfcf7_atts['padding_sides_mobile'] ) ? $cfcf7_atts['padding_sides_mobile'] : '1.5';
+		$cfcf7_padding_bottom_mobile = isset( $cfcf7_atts['padding_bottom_mobile'] ) ? $cfcf7_atts['padding_bottom_mobile'] : '2';
+
+		$cfcf7_submit_width_mobile = cfcf7_normalize_submit_width(
+			isset( $cfcf7_atts['submit_width_mobile'] ) ? $cfcf7_atts['submit_width_mobile'] : '',
+			'100%'
+		);
+
+		$cfcf7_submit_container_width_mobile = cfcf7_get_submit_container_width(
+			isset( $cfcf7_atts['submit_width_mobile'] ) ? $cfcf7_atts['submit_width_mobile'] : '',
+			'100%'
+		);
+
+		$cfcf7_submit_settings_array[] = "
+@media only screen and (max-width: 480px) {
+	{$cfcf7_block_scope} {
+		font-size: {$cfcf7_base_font_size_mobile}px !important;
+		margin-top: {$cfcf7_margin_top_mobile}em !important;
+		margin-left: {$cfcf7_margin_sides_mobile}em !important;
+		margin-right: {$cfcf7_margin_sides_mobile}em !important;
+		margin-bottom: {$cfcf7_margin_bottom_mobile}em !important;
+		padding-top: {$cfcf7_padding_top_mobile}em !important;
+		padding-left: {$cfcf7_padding_sides_mobile}em !important;
+		padding-right: {$cfcf7_padding_sides_mobile}em !important;
+		padding-bottom: {$cfcf7_padding_bottom_mobile}em !important;
+	}
+	{$cfcf7_submit_container_string} {
+		width: {$cfcf7_submit_container_width_mobile} !important;
+		max-width: 100%;
+	}
+	{$cfcf7_submit_field_string} {
+		width: {$cfcf7_submit_width_mobile} !important;
+	}
+}";
+
+		return $cfcf7_submit_settings_array;
+	}
 }
 
 /**
- * Submit Border
- *
+ * Final submit rules array for the parent render callback.
  */
-if (
-    !empty($atts["show_submit_border"]) &&
-    $atts["show_submit_border"] !== false
-) {
-    
-        if (empty($atts["submit_border_width"])) {
-            $submit_border_width = "0";
-            $submitBorderWidthString = "$submitFieldString{ border-width: $submit_border_width;}";
-            $submit_settings_array[] = $submitBorderWidthString;
-        }
-
-        if (!empty($atts["submit_border_width"])) {
-            $submit_border_width = $atts["submit_border_width"] . "px";
-            $submitBorderWidthString = "$submitFieldString{ border-width: $submit_border_width;}";
-            $submit_settings_array[] = $submitBorderWidthString;
-        }
-    
-
-    if (!empty($atts["submit_border_color"])) {
-        $submit_border_color = $atts["submit_border_color"];
-        $submitBorderColorString = "$submitFieldString{ border-color: $submit_border_color;}";
-        $submit_settings_array[] = $submitBorderColorString;
-    }
-
-    if (!empty($atts["submitBorderColorHover"])) {
-        $submitBorderColorHover = $atts["submitBorderColorHover"];
-        $submitBorderColorHoverString = "$submitFieldString:hover{ border-color: $submitBorderColorHover;}";
-        $submit_settings_array[] = $submitBorderColorHoverString;
-    }
-
-    $submitBorderStyleString = "$submitFieldString{ border-style: solid;}";
-    $submit_settings_array[] = $submitBorderStyleString;
-} else {
-    $submit_settings_array[] = "$submitFieldString{ border: none;}";
-}
-
-/**
- * Submit Shadow
- *
- */
-if (
-    !empty($atts["show_submit_shadow"]) &&
-    $atts["show_submit_shadow"] !== false
-) {
-    $boxShadow = "";
-    $block_h_offset = 0;
-    $block_v_offset = 0;
-    $block_blur = 0;
-    $block_spread = 0;
-    $block_shadow_color = "";
-
-    if (!empty($atts["submit_h_offset"])) {
-        $block_h_offset = $atts["submit_h_offset"];
-    }
-
-    if (!empty($atts["submit_v_offset"])) {
-        $block_v_offset = $atts["submit_v_offset"];
-    }
-    if (!empty($atts["submit_blur"])) {
-        $block_blur = $atts["submit_blur"];
-    }
-    if (!empty($atts["submit_spread"])) {
-        $block_spread = $atts["submit_spread"];
-    }
-    if (!empty($atts["submit_shadow_color"])) {
-        $block_shadow_color = $atts["submit_shadow_color"];
-    }
-
-    $boxShadow =
-        $block_h_offset .
-        "em " .
-        $block_v_offset .
-        "em " .
-        $block_blur .
-        "em " .
-        $block_spread .
-        "em " .
-        $block_shadow_color;
-
-    $submit_settings_array[] = "$submitFieldString{box-shadow:{$boxShadow};}";
-}
-
-
-if (isset($atts['show_submit_shadow']) && $atts['show_submit_shadow'] === false) {
-    $submit_settings_array[] = "$submitFieldString{box-shadow:none!important;}";
-}
-
-/**
- * Hide Submit Shadow on hover
- *
- */
-$submit_settings_array[] = "$submitFieldString:hover{box-shadow:none!important;}";
-
-
-/**
- * Some responsive styles for Tablet screens,
- *  
- */
-
-// Base Font Size
-if ( ! empty( $atts['base_font_size_tablet'] ) ) {
-    $base_font_size_tablet = $atts['base_font_size_tablet'];
-}
-
-// Block Margin
-$margin_top_tablet = 0;
-$margin_sides_tablet = 0;
-$margin_bottom_tablet = 0;
-
- if (!empty($atts["margin_top_tablet"])) {
-    $margin_top_tablet = $atts["margin_top_tablet"];
- }
- if (!empty($atts["margin_sides_tablet"])) {
-    $margin_sides_tablet = $atts["margin_sides_tablet"];
- }
- if (!empty($atts["margin_bottom_tablet"])) {
-    $margin_bottom_tablet = $atts["margin_bottom_tablet"];
- }
-
-// Block Padding
- if (!empty($atts["padding_top_tablet"])) {
-    $padding_top_tablet = $atts["padding_top_tablet"];
- }
- if (!empty($atts["padding_sides_tablet"])) {
-    $padding_sides_tablet = $atts["padding_sides_tablet"];
- }
- if (!empty($atts["padding_bottom_tablet"])) {
-    $padding_bottom_tablet = $atts["padding_bottom_tablet"];
- }
-
-
-// Submit Button Width
-if ( !empty($atts["submit_width_tablet"])) {
-
-    if ($atts["submit_width_tablet"] === "100") {
-        $submit_width_tablet = "100%";
-    } else {
-        $submit_width_tablet = "auto";
-    }
-
-}
-
-// Provide default values using the null coalescing operator `??`
-$base_font_size_tablet = $base_font_size_tablet ?? '16'; // Example default value
-$margin_top_tablet = $margin_top_tablet ?? '0';
-$margin_sides_tablet = $margin_sides_tablet ?? '2';
-$margin_bottom_tablet = $margin_bottom_tablet ?? '0';
-$padding_top_tablet = $padding_top_tablet ?? '1.6';
-$padding_sides_tablet = $padding_sides_tablet ?? '2.2';
-$padding_bottom_tablet = $padding_bottom_tablet ?? '1.6';
-$submit_width_tablet = $submit_width_tablet ?? '50';
-
-// Now it's safe to use the variables
-$submit_settings_array[] = "
-        @media only screen and (min-width: 361px) and (max-width: 780px) {
-            .cfcf7-block
-            { 
-                font-size: {$base_font_size_tablet}px!important; 
-                margin-top: {$margin_top_tablet}em!important; 
-                margin-left: {$margin_sides_tablet}em!important; 
-                margin-right: {$margin_sides_tablet}em!important; 
-                margin-bottom: {$margin_bottom_tablet}em!important;
-                padding-top: {$padding_top_tablet}em!important; 
-                padding-left: {$padding_sides_tablet}em!important; 
-                padding-right: {$padding_sides_tablet}em!important; 
-                padding-bottom: {$padding_bottom_tablet}em!important; 
-            } 
-            .cfcf7-block .wpcf7-submit{ width: {$submit_width_tablet}!important; 
-        }}";
-
-
-/**
- * Some responsive styles for Mobile screens,
- *  Block Sizing, Margin, Padding & Submit Button width.
- */
-
- // Base Font Size
-if ( ! empty( $atts['base_font_size_mobile'] ) ) {
-    $base_font_size_mobile = $atts['base_font_size_mobile'];
-}
-
-// Block Margin
-$margin_top_mobile = 0;
-$margin_sides_mobile = 0;
-$margin_bottom_mobile = 0;
-
- if (!empty($atts["margin_top_mobile"])) {
-    $margin_top_mobile = $atts["margin_top_mobile"];
- }
- if (!empty($atts["margin_sides_mobile"])) {
-    $margin_sides_mobile = $atts["margin_sides_mobile"];
- }
- if (!empty($atts["margin_bottom_mobile"])) {
-    $margin_bottom_mobile = $atts["margin_bottom_mobile"];
- }
-
-// Block Padding
- if (!empty($atts["padding_top_mobile"])) {
-    $padding_top_mobile = $atts["padding_top_mobile"];
- }
- if (!empty($atts["padding_sides_mobile"])) {
-    $padding_sides_mobile = $atts["padding_sides_mobile"];
- }
- if (!empty($atts["padding_bottom_mobile"])) {
-    $padding_bottom_mobile = $atts["padding_bottom_mobile"];
- }
-
-
-// Submit Button Width
-if ( !empty($atts["submit_width_mobile"])) {
-
-    if ($atts["submit_width_mobile"] === "100") {
-        $submit_width_mobile = "100%";
-    } else {
-        $submit_width_mobile = "auto";
-    }
-
-}
-
-// Provide default values using the null coalescing operator `??`
-$base_font_size_mobile = $base_font_size_mobile ?? '16'; // Example default value
-$margin_top_mobile = $margin_top_mobile ?? '1';
-$margin_sides_mobile = $margin_sides_mobile ?? '0';
-$margin_bottom_mobile = $margin_bottom_mobile ?? '1';
-$padding_top_mobile = $padding_top_mobile ?? '1.25';
-$padding_sides_mobile = $padding_sides_mobile ?? '1.2';
-$padding_bottom_mobile = $padding_bottom_mobile ?? '1.25';
-$submit_width_mobile = $submit_width_mobile ?? '100';
-
-// Now it's safe to use the variables
-$submit_settings_array[] = "
-@media only screen and (max-width: 360px) {
-    .cfcf7-block
-{ 
-                font-size: {$base_font_size_mobile}px!important; 
-                margin-top: {$margin_top_mobile}em!important; 
-                margin-left: {$margin_sides_mobile}em!important; 
-                margin-right: {$margin_sides_mobile}em!important; 
-                margin-bottom: {$margin_bottom_mobile}em!important;
-                padding-top: {$padding_top_mobile}em!important; 
-                padding-left: {$padding_sides_mobile}em!important; 
-                padding-right: {$padding_sides_mobile}em!important; 
-                padding-bottom: {$padding_bottom_mobile}em!important; 
-            } 
-            .cfcf7-block .wpcf7-submit{ width: {$submit_width_mobile}!important; 
-        }}";
-
-
+$cfcf7_submit_settings_array = cfcf7_build_submit_settings_array( $atts, $block_scope );

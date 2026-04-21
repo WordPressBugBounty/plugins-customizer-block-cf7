@@ -1,0 +1,28 @@
+@font-face {
+	font-family: "icomoon";
+	src: url("../fonts/icomoon.eot?gdzxw9");
+	src:
+		url("../fonts/icomoon.eot?gdzxw9#iefix") format("embedded-opentype"),
+		url("../fonts/icomoon.ttf?gdzxw9") format("truetype"),
+		url("../fonts/icomoon.woff?gdzxw9") format("woff"),
+		url("../fonts/icomoon.svg?gdzxw9#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+ul#adminmenu .toplevel_page_cfcf7_admin_page.wp-has-current-submenu > a.wp-has-current-submenu:after,
+ul#adminmenu .toplevel_page_cfcf7_admin_page.current > a.current:after {
+	border-right-color: #562461;
+}
+
+#adminmenu .toplevel_page_cfcf7_admin_page div.wp-menu-image:before {
+	font-family: "icomoon";
+	content: "\e999";
+	color: #9ca2a7;
+}
+
+#adminmenu .toplevel_page_cfcf7_admin_page.current div.wp-menu-image:before,
+#adminmenu .toplevel_page_cfcf7_admin_page.wp-has-current-submenu div.wp-menu-image:before {
+	color: #fff;
+}

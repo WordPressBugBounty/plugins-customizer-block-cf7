@@ -5,184 +5,113 @@
  * @package Customizer_Block_CF7
  */
 
- if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
- }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+// Initialize container styles array.
+$cfcf7_block_styles = array();
+
+/**
+ * Block background color.
+ */
+$cfcf7_block_styles[] = '--cfcf7-block-bg:' . ( ! empty( $atts['block_bg_color'] ) ? esc_attr( $atts['block_bg_color'] ) : 'transparent' );
+$cfcf7_block_styles[] = '--cfcf7-block-line-height:1.4em';
 
 
-	// Initialize Container Styles Array.
-	$styles = [];
+/**
+ * Base font size.
+ */
+$cfcf7_block_styles[] = '--cfcf7-block-font-size:' . ( ! empty( $atts['base_font_size'] ) ? floatval( $atts['base_font_size'] ) . 'px' : '16px' );
 
-	/**
-	 * Block Background color
-	 *
-	 */
+/**
+ * Block padding.
+ */
+$cfcf7_block_styles[] = '--cfcf7-block-padding-top:' . ( isset( $atts['padding_top'] ) ? floatval( $atts['padding_top'] ) . 'em' : '0' );
+$cfcf7_block_styles[] = '--cfcf7-block-padding-sides:' . ( isset( $atts['padding_sides'] ) ? floatval( $atts['padding_sides'] ) . 'em' : '0' );
+$cfcf7_block_styles[] = '--cfcf7-block-padding-bottom:' . ( isset( $atts['padding_bottom'] ) ? floatval( $atts['padding_bottom'] ) . 'em' : '0' );
 
-	if ( ! empty( $atts['block_bg_color'] ) ) {
-		$styles[] = "background-color:{$atts['block_bg_color']}; line-height: 1.4em!important;";
-	}
+/**
+ * Block margin.
+ */
+$cfcf7_block_styles[] = '--cfcf7-block-margin-top:' . ( isset( $atts['margin_top'] ) ? floatval( $atts['margin_top'] ) . 'em' : '0' );
+$cfcf7_block_styles[] = '--cfcf7-block-margin-sides:' . ( isset( $atts['margin_sides'] ) ? floatval( $atts['margin_sides'] ) . 'em' : '0' );
+$cfcf7_block_styles[] = '--cfcf7-block-margin-bottom:' . ( isset( $atts['margin_bottom'] ) ? floatval( $atts['margin_bottom'] ) . 'em' : '0' );
 
- 
-	/**
-	 * Base Font Size
-	 */
-	if ( ! empty( $atts['base_font_size'] ) ) {
-		$styles[] = 'font-size:' . $atts['base_font_size'] . 'px; ';
-	}
+/**
+ * Block rounded corners.
+ *
+ * Individual corner controls are no longer used.
+ * All corners should follow the same radius value.
+ */
+$cfcf7_radius = isset( $atts['block_border_radius'] ) ? floatval( $atts['block_border_radius'] ) . 'em' : '0';
 
+$cfcf7_block_styles[] = '--cfcf7-block-radius:' . $cfcf7_radius;
+$cfcf7_block_styles[] = '--cfcf7-block-radius-top-left:' . $cfcf7_radius;
+$cfcf7_block_styles[] = '--cfcf7-block-radius-top-right:' . $cfcf7_radius;
+$cfcf7_block_styles[] = '--cfcf7-block-radius-bottom-left:' . $cfcf7_radius;
+$cfcf7_block_styles[] = '--cfcf7-block-radius-bottom-right:' . $cfcf7_radius;
 
+/**
+ * Block box shadow.
+ */
+if ( ! empty( $atts['show_box_shadow'] ) && false !== $atts['show_box_shadow'] ) {
+	$cfcf7_block_h_offset     = ! empty( $atts['block_h_offset'] ) ? floatval( $atts['block_h_offset'] ) : 0;
+	$cfcf7_block_v_offset     = ! empty( $atts['block_v_offset'] ) ? floatval( $atts['block_v_offset'] ) : 0;
+	$cfcf7_block_blur         = ! empty( $atts['block_blur'] ) ? floatval( $atts['block_blur'] ) : 0;
+	$cfcf7_block_spread       = ! empty( $atts['block_spread'] ) ? floatval( $atts['block_spread'] ) : 0;
+	$cfcf7_block_shadow_color = ! empty( $atts['block_shadow_color'] ) ? esc_attr( $atts['block_shadow_color'] ) : 'transparent';
 
-	/**
-	 * Block Padding
-	 *
-	 */
+	$cfcf7_box_shadow =
+		$cfcf7_block_h_offset . 'em ' .
+		$cfcf7_block_v_offset . 'em ' .
+		$cfcf7_block_blur . 'em ' .
+		$cfcf7_block_spread . 'em ' .
+		$cfcf7_block_shadow_color;
 
-	if ( isset( $atts['padding_top'] ) ) {
-		$styles[] = 'padding-top:' . $atts['padding_top'] . 'em;';
-	}
-	
-	if ( isset( $atts['padding_sides'] ) ) {
-		$styles[] = 'padding-left:' . $atts['padding_sides'] . 'em;';
-		$styles[] = 'padding-right:' . $atts['padding_sides'] . 'em;';
+	$cfcf7_block_styles[] = '--cfcf7-block-shadow:' . $cfcf7_box_shadow;
+} else {
+	$cfcf7_block_styles[] = '--cfcf7-block-shadow:none';
+}
 
-	}
-	
-	if ( isset( $atts['padding_bottom'] ) ) {
-		$styles[] = 'padding-bottom:' . $atts['padding_bottom'] . 'em;';
-	}
+/**
+ * Block border.
+ */
+if ( ! empty( $atts['show_block_border'] ) && false !== $atts['show_block_border'] ) {
+	$cfcf7_block_styles[] = '--cfcf7-block-border-style:solid';
+	$cfcf7_block_styles[] = '--cfcf7-block-border-width:' . ( ! empty( $atts['block_border_width'] ) ? floatval( $atts['block_border_width'] ) . 'em' : '0' );
+} else {
+	$cfcf7_block_styles[] = '--cfcf7-block-border-style:none';
+	$cfcf7_block_styles[] = '--cfcf7-block-border-width:0';
+}
 
-			
-	/**
-	 * Block Margin
-	 *
-	 */
+$cfcf7_block_styles[] = '--cfcf7-block-border-color:' . ( ! empty( $atts['block_border_color'] ) ? esc_attr( $atts['block_border_color'] ) : 'transparent' );
 
-	if ( isset( $atts['margin_top'] ) ) {
-		$styles[] = 'margin-top:' . $atts['margin_top'] . 'em;';
-	}
+/**
+ * Also expose actual wrapper properties so front end still works
+ * even before editor.scss or style-index.css consumes variables.
+ */
+$cfcf7_block_styles[] = 'background-color:var(--cfcf7-block-bg)';
+$cfcf7_block_styles[] = 'line-height:var(--cfcf7-block-line-height) !important';
+$cfcf7_block_styles[] = 'font-size:var(--cfcf7-block-font-size)';
+$cfcf7_block_styles[] = 'padding-top:var(--cfcf7-block-padding-top)';
+$cfcf7_block_styles[] = 'padding-left:var(--cfcf7-block-padding-sides)';
+$cfcf7_block_styles[] = 'padding-right:var(--cfcf7-block-padding-sides)';
+$cfcf7_block_styles[] = 'padding-bottom:var(--cfcf7-block-padding-bottom)';
+$cfcf7_block_styles[] = 'margin-top:var(--cfcf7-block-margin-top)';
+$cfcf7_block_styles[] = 'margin-left:var(--cfcf7-block-margin-sides)';
+$cfcf7_block_styles[] = 'margin-right:var(--cfcf7-block-margin-sides)';
+$cfcf7_block_styles[] = 'margin-bottom:var(--cfcf7-block-margin-bottom)';
+$cfcf7_block_styles[] = 'border-top-left-radius:var(--cfcf7-block-radius-top-left, var(--cfcf7-block-radius, 0))';
+$cfcf7_block_styles[] = 'border-top-right-radius:var(--cfcf7-block-radius-top-right, var(--cfcf7-block-radius, 0))';
+$cfcf7_block_styles[] = 'border-bottom-left-radius:var(--cfcf7-block-radius-bottom-left, var(--cfcf7-block-radius, 0))';
+$cfcf7_block_styles[] = 'border-bottom-right-radius:var(--cfcf7-block-radius-bottom-right, var(--cfcf7-block-radius, 0))';
+$cfcf7_block_styles[] = 'box-shadow:var(--cfcf7-block-shadow)';
+$cfcf7_block_styles[] = 'border-style:var(--cfcf7-block-border-style)';
+$cfcf7_block_styles[] = 'border-width:var(--cfcf7-block-border-width)';
+$cfcf7_block_styles[] = 'border-color:var(--cfcf7-block-border-color)';
 
-	if ( isset( $atts['margin_sides']) ) {
-		$styles[] = 'margin-left:' . $atts['margin_sides'] . 'em;';
-		$styles[] = 'margin-right:' . $atts['margin_sides'] .'em;';
-	}
-
-	if ( isset( $atts['margin_bottom'] ) ) {
-		$styles[] = 'margin-bottom:' . $atts['margin_bottom'] . 'em;';
-	}
-
-	/**
-	 * Block Rounded Corners
-	 *
-	 */
-	
-	// Check if the 'block_border_radius' is set, if so, apply it to all corners
-	if (  isset( $atts['block_border_radius'] ) ) {
-		$styles[] = 'border-radius: ' . $atts['block_border_radius'] . 'em;';
-	} else {
-		// Apply individual corner styles if 'block_border_radius' is not set
-		if ( empty( $atts['top_left_corner'] ) ) {
-			$styles[] = 'border-top-left-radius: 0; ';
-		} else {
-			$styles[] = 'border-top-left-radius:' . $atts['top_left_corner'] . 'em;';
-		}
-
-		if ( empty( $atts['top_right_corner'] ) ) {
-			$styles[] = 'border-top-right-radius: 0; ';
-		} else {
-			$styles[] = 'border-top-right-radius:' . $atts['top_right_corner'] . 'em;';
-		}
-
-		if ( empty( $atts['bottom_left_corner'] ) ) {
-			$styles[] = 'border-bottom-left-radius: 0; ';
-		} else {
-			$styles[] = 'border-bottom-left-radius:' . $atts['bottom_left_corner'] . 'em;';
-		}
-
-		if ( empty( $atts['bottom_right_corner'] ) ) {
-			$styles[] = 'border-bottom-right-radius: 0; ';
-		} else {
-			$styles[] = 'border-bottom-right-radius:' . $atts['bottom_right_corner'] . 'em;';
-		}
-	}
-
-	/**
-	 * Block Box Shadow
-	 *
-	 */
-
-	if ( ! empty( $atts['show_box_shadow'] ) && $atts['show_box_shadow'] !== false ) {
-
-		$boxShadow = '';
-		$block_h_offset = 0;
-		$block_v_offset = 0;
-		$block_blur = 0;
-		$block_spread = 0;
-		$block_shadow_color = '';
-
-
-		if ( ! empty( $atts['block_h_offset'] ) ){
-			$block_h_offset = $atts['block_h_offset'];
-		} 
-
-		if ( ! empty( $atts['block_v_offset'] ) ){
-			$block_v_offset = $atts['block_v_offset'];
-		}
-		if ( ! empty( $atts['block_blur'] ) ){
-			$block_blur = $atts['block_blur'];
-		}
-		if ( ! empty( $atts['block_spread'] ) ){
-			$block_spread = $atts['block_spread'];
-		}
-		if ( ! empty( $atts['block_shadow_color'] ) ){
-			$block_shadow_color = $atts['block_shadow_color'];
-		}
-
-		$boxShadow = 
-		$block_h_offset .
-		'em ' .
-		$block_v_offset .
-		'em ' . 
-		$block_blur .
-		'em ' . 
-		$block_spread .
-		'em ' .
-		$block_shadow_color;
-
-        $styles[] = "box-shadow:{$boxShadow};";
-	
-    } else {
-		$styles[] = "box-shadow:none!important;";
-	}
-
-	
-	/**
-	 * Block Border
-	 *
-	 */
-
-	if ( ! empty( $atts['show_block_border'] ) && $atts['show_block_border'] !== false ) {
-
-		$styles[] = 'border-style: solid;';
-
-		if ( ! empty( $atts['block_border_width'] ) ) {
-			$block_border_width = $atts['block_border_width'] . "em";
-			$styles[] = 'border-width:' . $block_border_width . '; ';
-			
-		}
-		if ( empty( $atts['block_border_width'] ) ) {
-			$block_border_width = '0';
-			$styles[] = 'border-width:'. $block_border_width .'; ';
-			}
-		}
-		if ( ! empty( $atts['block_border_color'] ) ) {
-			$styles[] = 'border-color:'. $atts['block_border_color'] .'; ';
-		}
-	
-		
-			
-	/**
-	 *  == Parse Styles Array to String...
-	 *
-	 */
-
-	$styles = implode(' ', $styles);
+/**
+ * == Parse styles array to string.
+ */
+$cfcf7_block_styles = implode( '; ', $cfcf7_block_styles ) . ';';

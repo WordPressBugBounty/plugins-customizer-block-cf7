@@ -1,21 +1,23 @@
 === Style Contact Form 7 ===
 Contributors: mofistudio
-Tags: Contact Forms, Contact Form 7, Contact Form 7 Style, CF7
+Tags: contact form 7, contact form, form styling, gutenberg, cf7
 Requires at least: 6.0
-Tested up to: 6.8
-Stable tag: 1.3
+Tested up to: 6.9
 Requires PHP: 7.4
+Stable tag: 1.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This Contact Form 7 compatible Gutenberg Block automates CSS style generation allowing you to quickly design visually appealing contact forms.
+Style Contact Form 7 lets you visually design Contact Form 7 forms in the block editor with live styling controls.
 
 == Description ==
 
 This Contact Form 7 compatible Gutenberg Block automates CSS style generation allowing you to quickly design visually appealing contact forms with minimal setup.
 
+== Blocks ==
 
-https://www.youtube.com/watch?v=CU86fjVT4w4
+= Style Contact Form 7 =
+Design and style Contact Form 7 forms visually in the block editor with live styling controls.
 
 = Features =
 
@@ -24,14 +26,13 @@ https://www.youtube.com/watch?v=CU86fjVT4w4
 - Intuitive Styling for Contact Form 7: Unleash your creativity with this user-friendly interface, allowing you to style and modify your contact forms to perfectly align with your website's theme and branding.
 - User Experience Focused: This plugin prioritizes your visitors' interaction experience and guarantees smooth, engaging, and accessible contact forms, enhancing user engagement and increasing the likelihood of form submissions.
 - Seamless Integration with Contact Form 7: Designed to complement Contact Form 7, this plugin extends its functionality, providing you with the tools to create beautifully styled forms without any hassle or complicated admin panels!
-- Eye catching default Styling of Contact Form 7 event messages for Invalid fields, Message failed & Message Success.
-- Multilingual with 15 languages.
-- Comprehensive documentation with Video demos.
-- Full list of controls in order from top to bottom: - 
+- Eye-catching default styling of Contact Form 7 event messages for invalid fields, message failed & message success.
+- Multilingual support with multiple translations.
+- Comprehensive documentation with video demos.
+- Full list of controls in order from top to bottom:
 - BLOCK Settings : Block Sizing, Block Margin, Block Padding, Block Background, Block Shadow.
 - FORM FIELDS : Field Background, Field Labels (Font Size, Line Height, Text transform, Font Weight, Font Color), Field Text (Font Size, Field Text Color, Placeholder Text Color), Field Padding, Field Border, Field Shadow.
 - SUBMIT SETTINGS : Submit Background (Solid color or Gradient), Submit Text (Font Size, Text transform, Font Weight, Submit Text Color), Submit Width, Submit Padding, Submit Border, Submit Shadow.
-
 
 = Docs and support =
 
@@ -49,14 +50,13 @@ View the [Docs](https://stylecontactform7.com/documentation/), get fast [Support
 
 = Will Style Contact Form 7 plugin work with my theme? =
 
-Obviously it would be impossible to test this with every WordPress theme but it is stable in many themes especially block themes. 
+While it is not possible to test with every WordPress theme, the plugin has been tested with many themes, especially block themes. 
 The demo videos were recorded with Twenty Twenty-Three theme.
 Feel free to contact [Support](https://stylecontactform7.com/support/) if it is not working as expected.
 
 = I am having issues, can you offer support? =
 
 Yes, click here for [Support](https://stylecontactform7.com/support/)
-
 
 == Screenshots ==
 
@@ -68,10 +68,16 @@ Yes, click here for [Support](https://stylecontactform7.com/support/)
 
 == Changelog ==
 
+= 1.4 =
+* Tested up to WP 6.9.4
+* Added instance class to make unique in case of multiple forms
+* Moved messages to popup
+* Adjusted some default css values
+* Centered spinner on button when set to width Auto.
+
 = 1.3 =
 * Tested with WP 6.8
 * Updated documentation
-
 
 = 1.2 =
 * Added new pro demo video.
@@ -85,7 +91,6 @@ Yes, click here for [Support](https://stylecontactform7.com/support/)
 * Fixed $wrapper_attributes output bug, flagged by plugin check.
 * Changed default left and right margin for mobile screen size to -0.5 (em).
 
-
 = 1.1.8 =
 * fixing broken SVG icon links
 
@@ -95,7 +100,6 @@ Yes, click here for [Support](https://stylecontactform7.com/support/)
 * launched Style Contact Form 7 Pro - https://stylecontactform7.com/pro/
 * Added more detailed descriptions of block features in the readme and added demo video.
 * Translated all new text to 15 languages, Danish, German, English (UK), Spanish (Spain), Finnish, French (France), Croatian, Italian, Dutch, Polish, Portuguese (Portugal) Romanian, Russian, Swedish & Ukrainian.
-
 
 = 1.1.6 =
 * Set font family and removed some default form styles. 
@@ -127,7 +131,6 @@ Yes, click here for [Support](https://stylecontactform7.com/support/)
 * Added 'Requires Plugins:' header tag (WP 6.5+).
 * Added fill color to Block Icon background.
 * Added Top & Bottom negative Margin options to help refine block positioning for Desktop, Tablet & Mobiles screen sizes.
-
 
 = 1.0.9 =
 * Added styles for Contact Form 7 input fields, (radio, checkbox, number, select), Added margin option to Submit button, Added Gradient option to Submit button. Added field focus outline settings.
