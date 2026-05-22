@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "mofistudio/customizer-block-cf7",
-  "version": "1.4",
+  "version": "1.4.1",
   "title": "Style Contact Form 7",
   "category": "widgets",
   "description": "Style your Contact Form 7 forms with Ease.",

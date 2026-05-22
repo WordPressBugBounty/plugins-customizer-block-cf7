@@ -21,7 +21,7 @@ function cfcf7_plugin_assets( $hook_suffix ) {
 
 	$version = defined( 'CFCF7_VERSION' ) ? CFCF7_VERSION : '1.0.0';
 
-	// Load small menu icon CSS globally in admin
+	// Load small menu icon CSS globally in admin.
 	wp_enqueue_style(
 		'cfcf7-admin-menu-style',
 		CFCF7_PLUGIN_URL . '/admin/css/cfcf7-admin-menu.css',
@@ -29,7 +29,23 @@ function cfcf7_plugin_assets( $hook_suffix ) {
 		$version
 	);
 
-	// Only load full admin page CSS on your plugin page
+	// WordPress 7.0+ admin menu icon colour adjustment.
+	global $wp_version;
+
+	$menu_icon_color = version_compare( $wp_version, '7.0', '>=' )
+		? '#f3f1f1'
+		: '#9ca2a7';
+
+	wp_add_inline_style(
+		'cfcf7-admin-menu-style',
+		"
+		#adminmenu .toplevel_page_cfcf7_admin_page div.wp-menu-image:before {
+			color: {$menu_icon_color};
+		}
+		"
+	);
+
+	// Only load full admin page CSS on your plugin page.
 	if ( 'toplevel_page_cfcf7_admin_page' !== $hook_suffix ) {
 		return;
 	}

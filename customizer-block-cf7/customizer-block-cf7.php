@@ -3,7 +3,7 @@
  * Plugin Name:       Style Contact Form 7
  * Plugin URI:        https://stylecontactform7.com
  * Description:       This Contact Form 7 compatible Gutenberg Block automates CSS style generation allowing you to quickly design visually appealing contact forms with minimal setup.
- * Version:           1.4
+ * Version:           1.4.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Requires Plugins:  contact-form-7
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants.
-define( 'CFCF7_VERSION', '1.4' );
+define( 'CFCF7_VERSION', '1.4.1' );
 define( 'CFCF7_PLUGIN', __FILE__ );
 define( 'CFCF7_PLUGIN_DIR', untrailingslashit( dirname( CFCF7_PLUGIN ) ) );
 define( 'CFCF7_PLUGIN_URL', untrailingslashit( plugins_url( '', CFCF7_PLUGIN ) ) );
